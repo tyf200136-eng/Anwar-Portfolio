@@ -74,8 +74,8 @@ const SITE = {
     heroImages: ["assets/img/hero-1.svg", "assets/img/hero-2.svg"],
     tagline: { ar: "تصميم جرافيك لأصحاب الأفكار الواضحة", en: "Graphic design for founders with a clear vision" },
     intro: {
-      ar: "أصمّم علامات تجارية تضيف طبقة جديدة إلى الحياة اليومية. استراتيجية، هوية، مطبوعات، مواقع، وحضور رقمي: خمس خدمات ورؤية واحدة. ما نصنعه معاً سيجد مكانه في العالم، فلنجعله أجمل.",
-      en: "I design brands that add an extra layer to everyday life. Strategy, identity, print, web and digital: five services, one vision. What we make together will find its place in the world, so let's make it beautiful."
+      ar: "أؤمن أن وراء كل تصميم جيد فكرة واضحة، وأن التفاصيل هي ما يمنحها حضور. أنا مصممة جرافيك أستمتع بتطوير الأفكار وتحويلها إلى حلول بصرية متكاملة. أحرص أن يكون لكل مشروع أسلوبه وشخصيته الخاصة، وأولي التفاصيل عناية كبيرة للوصول إلى نتيجة متناسقه ومدروسة.",
+      en: "I believe that behind every great design lies a clear idea, and it is the details that give it presence. As a graphic designer, I enjoy developing concepts and turning them into cohesive visual solutions. I strive to ensure every project has its own unique style and personality, paying close attention to detail to achieve a harmonious and well crafted result."
     },
     casesEyebrow: { ar: "الأعمال", en: "Work" },
     casesTitle: { ar: "نتائج لعلامات تعرف من هي", en: "Results for brands that know who they are" },
@@ -261,6 +261,14 @@ const SITE = {
     eyebrow: { ar: "الأعمال", en: "Work" },
     title: { ar: "مشاريع صنعتها بحب", en: "Projects made with care" },
     text: { ar: "مجموعة مختارة من الهويات والمطبوعات والمواقع التي صممتها لعلامات في قطاعات مختلفة.", en: "A selection of identities, print and websites designed for brands across different sectors." }
+  },
+
+      projects: { ar: "مشاريع", en: "projects" },
+    coverTab: { ar: "ملف الأعمال", en: "Portfolio" },
+    folderHint: { ar: "اختر مجلداً لاستعراض الأعمال", en: "Pick a folder to browse the work" },
+    scrollHint: { ar: "مرّر لاستعراض المشاريع", en: "Scroll to browse" },
+    empty: { ar: "قريباً", en: "Coming soon" 
+
   },
 
   /* ---------- صفحة من أنا ---------- */
