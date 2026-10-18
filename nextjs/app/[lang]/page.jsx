@@ -62,12 +62,6 @@ export default async function Home({ params }) {
             </div>
           </div>
 
-          <div className="wrap" id="services">
-            <SectionHead eyebrow={h.servicesEyebrow} title={h.servicesTitle} lang={lang} />
-            <div className="stack" data-stack="">
-              {SITE.services.map((x) => <ServiceCard key={x.slug} x={x} lang={lang} />)}
-            </div>
-          </div>
 
           <div className="section wrap">
             <div className="tm">
@@ -83,43 +77,7 @@ export default async function Home({ params }) {
         </div>
       </section>
 
-      {/* طريقة العمل */}
-      <section className="section wrap">
-        <div className="t2m">
-          <Media className="t2m__small" path={h.approachImages[0]} data-parallax="-0.1" />
-          <div className="t2m__text">
-            <span className="eyebrow">{t(h.approachEyebrow)}</span>
-            <h2>{t(h.approachTitle)}</h2>
-            <p>{t(h.approachText)}</p>
-            <Btn href={pagePath(lang, "about")}>{t(h.approachCta)}</Btn>
-          </div>
-          <Media className="t2m__big" path={h.approachImages[1]} data-clip="" />
-        </div>
-      </section>
 
-      {/* آراء العملاء */}
-      <section className="section testi" data-testi="">
-        <div className="wrap testi__head">
-          <h2>{t(h.testimonialsTitle)}</h2>
-          <div className="testi__nav">
-            <button className="icon-btn" type="button" data-prev="" aria-label={t(SITE.ui.prev)}><IconBack /></button>
-            <button className="icon-btn" type="button" data-next="" aria-label={t(SITE.ui.next)}><IconArrow /></button>
-          </div>
-        </div>
-        <div className="swiper">
-          <div className="swiper-wrapper">
-            {SITE.testimonials.map((q, i) => (
-              <div className="swiper-slide" key={i}>
-                <figure className="quote">
-                  <IconQuote />
-                  <blockquote><p>{t(q.quote)}</p></blockquote>
-                  <figcaption><strong>{t(q.name)}</strong><span>{t(q.company)}</span></figcaption>
-                </figure>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Marquee lang={lang} />
       <Cta lang={lang} />

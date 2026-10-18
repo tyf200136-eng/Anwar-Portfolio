@@ -39,7 +39,6 @@ const SITE = {
   /* ---------- القائمة ---------- */
   nav: [
     { page: "work", label: { ar: "الأعمال", en: "Work" } },
-    { page: "services", label: { ar: "الخدمات", en: "Services" } },
     { page: "about", label: { ar: "من أنا", en: "About" } },
     { page: "contact", label: { ar: "تواصل", en: "Contact" } }
   ],
@@ -130,32 +129,17 @@ const SITE = {
       },
       tags: [{ ar: "الشعار", en: "Logo" }, { ar: "النظام البصري", en: "Visual system" }, { ar: "دليل الهوية", en: "Brand guidelines" }]
     },
-    {
-      slug: "print", icon: "arch", bg: "#c6b6ff", fg: "#161412",
-      title: { ar: "المطبوعات والتغليف", en: "Print & packaging" },
-      text: {
-        ar: "المطبوعات هي علامتك خارج الشاشة: شيء يُمسك ويُحَسّ ويُحتفظ به. التفاصيل هنا يشعر بها الناس حتى لو لم يروها: الورق، الملمس، وطريقة الطباعة.",
-        en: "Print is your brand offline: something to hold, feel and keep. The details here are felt even when they aren't seen: paper, texture, printing method, finish."
-      },
-      tags: [{ ar: "بطاقات العمل", en: "Business cards" }, { ar: "التغليف", en: "Packaging" }, { ar: "الملصقات", en: "Posters" }, { ar: "الكتب والمجلات", en: "Books & magazines" }]
+        {
+      slug: "presentations", icon: "square", bg: "#c6b6ff", fg: "#161412",
+      title: { ar: "العروض التقديمية", en: "Presentations" },
+      text: { ar: "عروض واضحة ومقنعة تحكي قصتك.", en: "Clear, persuasive decks that tell your story." },
+      tags: [{ ar: "عروض المستثمرين", en: "Pitch decks" }, { ar: "عروض الشركات", en: "Company profiles" }]
     },
     {
-      slug: "web", icon: "triangle", bg: "#0f4d4a", fg: "#f5f0e8",
-      title: { ar: "تصميم المواقع", en: "Web design" },
-      text: {
-        ar: "موقعك هو واجهتك على الإنترنت. ليس قالباً تملؤه، بل مكان يشعر فيه الزائر إن كانت علامتك صادقة أم لا. أصمم مواقع ومتاجر تبدو مألوفة من الثانية الأولى.",
-        en: "Your website is your shopfront online. It isn't a template to fill in; it's where people sense whether your brand rings true. I design sites and shops that feel familiar from the first second."
-      },
-      tags: [{ ar: "المواقع", en: "Websites" }, { ar: "صفحات الهبوط", en: "Landing pages" }, { ar: "المتاجر", en: "E-commerce" }]
-    },
-    {
-      slug: "social", icon: "wave", bg: "#ffc46b", fg: "#161412",
-      title: { ar: "الحضور الرقمي", en: "Digital presence" },
-      text: {
-        ar: "علامتك موجودة كل يوم في عشرات الصفحات والرسائل. أصمم قوالب للسوشيال والبريد والإعلانات تملؤها أنت بنفسك، فتبقى علامتك مميزة دون أن تبدأ من الصفر كل مرة.",
-        en: "Your brand shows up every day in feeds and inboxes. I design templates for social, email and ads that you fill in yourself, so your brand stays recognisable without starting from scratch."
-      },
-      tags: [{ ar: "تصاميم السوشيال", en: "Social media" }, { ar: "النشرات البريدية", en: "Email" }, { ar: "الإعلانات الرقمية", en: "Digital ads" }]
+      slug: "marketing", icon: "triangle", bg: "#ffc46b", fg: "#161412",
+      title: { ar: "التطبيقات التسويقية", en: "Marketing applications" },
+      text: { ar: "تطبيق الهوية على كل ما يحتاجه التسويق.", en: "Applying your brand to everything marketing needs." },
+      tags: [{ ar: "إعلانات", en: "Ads" }, { ar: "مطبوعات", en: "Print" }]
     }
   ],
 
@@ -236,38 +220,8 @@ const SITE = {
         { src: "assets/img/wafi-clinics-3.svg", size: "half" }
       ]
     },
-    {
-      slug: "rawi-publishing", year: "2023", featured: true,
-      title: { ar: "دار راوي للنشر", en: "Rawi Publishing" },
-      category: { ar: "نشر", en: "Publishing" },
-      client: { ar: "دار راوي", en: "Rawi House" },
-      services: ["print"],
-      cover: "assets/img/rawi-publishing-cover.svg", video: "",
-      summary: { ar: "سلسلة أغلفة كتب لدار نشر مستقلة.", en: "A series of book covers for an independent publisher." },
-      challenge: { ar: "سلسلة من اثني عشر كتاباً تحتاج هوية موحدة، مع شخصية خاصة لكل عنوان.", en: "A twelve-book series that needed a unified look, while giving each title its own character." },
-      solution: { ar: "شبكة ثابتة للعنوان والمؤلف، وتكوينات هندسية مختلفة لكل كتاب تعبّر عن موضوعه.", en: "A fixed grid for title and author, with a different geometric composition for each book that hints at its theme." },
-      gallery: [
-        { src: "assets/img/rawi-publishing-1.svg", size: "full" },
-        { src: "assets/img/rawi-publishing-2.svg", size: "half" },
-        { src: "assets/img/rawi-publishing-3.svg", size: "half" }
-      ]
-    },
-    {
-      slug: "dune-skincare", year: "2023", featured: true,
-      title: { ar: "ديون للعناية", en: "Dune Skincare" },
-      category: { ar: "تجميل", en: "Beauty" },
-      client: { ar: "ديون", en: "Dune" },
-      services: ["identity", "print", "social"],
-      cover: "assets/img/dune-skincare-cover.svg", video: "",
-      summary: { ar: "هوية وتغليف لعلامة عناية بالبشرة مستوحاة من الصحراء.", en: "Identity and packaging for a desert-inspired skincare brand." },
-      challenge: { ar: "علامة ناشئة تنافس أسماء عالمية على الرف نفسه.", en: "A young brand competing with global names on the same shelf." },
-      solution: { ar: "تغليف بألوان الرمل وأشكال الكثبان، وخط أنيق، وقوالب سوشيال يسهل على الفريق استخدامها.", en: "Packaging in sand tones with dune-shaped forms, an elegant typeface and social templates the team can use with ease." },
-      gallery: [
-        { src: "assets/img/dune-skincare-1.svg", size: "full" },
-        { src: "assets/img/dune-skincare-2.svg", size: "half" },
-        { src: "assets/img/dune-skincare-3.svg", size: "half" }
-      ]
-    }
+
+
   ],
 
   /* ---------- آراء العملاء (تجريبية — استبدلها بآراء حقيقية) ---------- */
