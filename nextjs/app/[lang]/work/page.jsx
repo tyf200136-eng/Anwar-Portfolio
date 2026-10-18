@@ -22,7 +22,15 @@ export default async function Work({ params }) {
     fg: sv.fg,
     items: SITE.cases
       .filter((c) => c.services.includes(sv.slug))
-      .map((c) => ({ slug: c.slug, title: t(c.title), category: t(c.category), cover: src(c.cover), href: casePath(lang, c.slug) }))
+      .map((c) => ({
+        slug: c.slug,
+        title: t(c.title),
+        category: t(c.category),
+        cover: src(c.cover),
+        href: casePath(lang, c.slug),
+        // تصاميم العميل اللي تنفتح عند الضغط على البطاقة (من gallery في site.js)
+        gallery: (c.gallery && c.gallery.length ? c.gallery.map((g) => src(g.src)) : [src(c.cover)])
+      }))
   }));
 
   const labels = {
@@ -31,6 +39,8 @@ export default async function Work({ params }) {
     hint: t(w.folderHint),
     scrollHint: t(w.scrollHint),
     empty: t(w.empty),
+    listTitle: t(w.listTitle),
+    fullProject: t(w.fullProject),
     back: t(SITE.ui.close)
   };
 

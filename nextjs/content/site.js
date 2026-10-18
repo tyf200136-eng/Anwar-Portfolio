@@ -110,34 +110,34 @@ const SITE = {
 
   /* ---------- الخدمات (تظهر كبطاقات متراكمة وفي الفوتر وفي الفلترة) ---------- */
   // icon: circle | square | arch | triangle | wave
-  services: [
-    {
-      slug: "strategy", icon: "circle", bg: "#d4f36b", fg: "#161412",
-      title: { ar: "استراتيجية العلامة", en: "Brand strategy" },
-      text: {
-        ar: "علامَ تقف علامتك؟ ليس ما تبيعه، بل من أنت. أبدأ من هنا، وكل شيء بعدها ينبع من هذه الإجابة: القصة، الاسم، والعبارة.",
-        en: "What does your brand stand for? Not what you sell, but who you are. I start there, and everything else flows from it: the story, the name, the tagline."
-      },
-      tags: [{ ar: "قصة العلامة", en: "Brand story" }, { ar: "التسمية", en: "Naming" }, { ar: "العبارة التسويقية", en: "Tagline" }]
-    },
+    services: [
     {
       slug: "identity", icon: "square", bg: "#ff7a59", fg: "#161412",
-      title: { ar: "الهوية البصرية", en: "Visual identity" },
+      title: { ar: "هوية بصرية", en: "Visual identity" },
       text: {
         ar: "يتعرف الناس على علامتك قبل أن يقرؤوا كلمة واحدة: من لون، أو شكل، أو خط. الهوية ليست زينة تضاف لاحقاً، بل هي طريقة وقوف علامتك في العالم.",
         en: "People recognise your brand before reading a single word: a colour, a shape, a typeface. Identity isn't decoration added later; it's how your brand stands in the world."
       },
       tags: [{ ar: "الشعار", en: "Logo" }, { ar: "النظام البصري", en: "Visual system" }, { ar: "دليل الهوية", en: "Brand guidelines" }]
     },
-        {
-      slug: "presentations", icon: "square", bg: "#c6b6ff", fg: "#161412",
-      title: { ar: "العروض التقديمية", en: "Presentations" },
+    {
+      slug: "social", icon: "wave", bg: "#d4f36b", fg: "#161412",
+      title: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social media posts" },
+      text: {
+        ar: "منشورات وقوالب تحافظ على هوية علامتك في كل منصة، وتلفت الانتباه من أول نظرة.",
+        en: "Posts and templates that keep your brand consistent on every platform and catch the eye at first glance."
+      },
+      tags: [{ ar: "منشورات", en: "Posts" }, { ar: "قصص", en: "Stories" }, { ar: "قوالب", en: "Templates" }]
+    },
+    {
+      slug: "presentations", icon: "arch", bg: "#c6b6ff", fg: "#161412",
+      title: { ar: "عروض تقديمية", en: "Presentations" },
       text: { ar: "عروض واضحة ومقنعة تحكي قصتك.", en: "Clear, persuasive decks that tell your story." },
       tags: [{ ar: "عروض المستثمرين", en: "Pitch decks" }, { ar: "عروض الشركات", en: "Company profiles" }]
     },
     {
       slug: "marketing", icon: "triangle", bg: "#ffc46b", fg: "#161412",
-      title: { ar: "التطبيقات التسويقية", en: "Marketing applications" },
+      title: { ar: "تطبيقات التسويق والعلامات التجارية", en: "Marketing & brand applications" },
       text: { ar: "تطبيق الهوية على كل ما يحتاجه التسويق.", en: "Applying your brand to everything marketing needs." },
       tags: [{ ar: "إعلانات", en: "Ads" }, { ar: "مطبوعات", en: "Print" }]
     }
@@ -149,26 +149,22 @@ const SITE = {
   // gallery size: full (عرض كامل) أو half (نصف عرض)
   cases: [
     {
-      slug: "nakhla-coffee", year: "2025", featured: true,
-      title: { ar: "نخلة كوفي", en: "Nakhla Coffee" },
-      category: { ar: "مقاهي ومطاعم", en: "Food & beverage" },
-      client: { ar: "نخلة كوفي، الرياض", en: "Nakhla Coffee, Riyadh" },
-      services: ["strategy", "identity", "print", "social"],
-      cover: "assets/img/nakhla-coffee-cover.svg", video: "",
-      summary: { ar: "هوية دافئة لمقهى مختص يحتفي بالتمر والقهوة السعودية.", en: "A warm identity for a specialty café celebrating dates and Saudi coffee." },
-      challenge: {
-        ar: "أراد المؤسسون مقهى حديثاً لا يفقد روح الضيافة السعودية، في سوق مزدحم بالعلامات المتشابهة.",
-        en: "The founders wanted a modern café that keeps the spirit of Saudi hospitality, in a market crowded with look-alike brands."
-      },
-      solution: {
-        ar: "بنينا نظاماً بصرياً من أشكال سعف النخل المبسطة وألوان التمر، يمتد من الأكواب إلى القائمة والواجهة.",
-        en: "We built a visual system from simplified palm-frond shapes and date-inspired colours, running from cups to menus to the storefront."
-      },
+      slug: "coffee", year: "2025", featured: true,
+      title: { ar: "عنوان القهوة", en: "Coffee Address" },
+      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social media posts" },
+      client: { ar: "عنوان القهوة", en: "Coffee Address" },
+      services: ["social"],
+      cover: "assets/img/work/coffee/cover.png", video: "",
+      summary: { ar: "سلسلة منشورات لحسابات عنوان القهوة على وسائل التواصل الاجتماعي.", en: "A series of social media posts for Coffee Address." },
+      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
+      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
       gallery: [
-        { src: "assets/img/nakhla-coffee-1.svg", size: "full" },
-        { src: "assets/img/nakhla-coffee-2.svg", size: "half" },
-        { src: "assets/img/nakhla-coffee-3.svg", size: "half" },
-        { src: "assets/img/nakhla-coffee-4.svg", size: "full" }
+        { src: "assets/img/work/coffee/1.png", size: "half" },
+        { src: "assets/img/work/coffee/2.png", size: "half" },
+        { src: "assets/img/work/coffee/3.png", size: "half" },
+        { src: "assets/img/work/coffee/4.png", size: "half" },
+        { src: "assets/img/work/coffee/5.png", size: "half" },
+        { src: "assets/img/work/coffee/6.png", size: "half" }
       ]
     },
     {
@@ -260,16 +256,17 @@ const SITE = {
   work: {
     eyebrow: { ar: "الأعمال", en: "Work" },
     title: { ar: "مشاريع صنعتها بحب", en: "Projects made with care" },
-    text: { ar: "مجموعة مختارة من الهويات والمطبوعات والمواقع التي صممتها لعلامات في قطاعات مختلفة.", en: "A selection of identities, print and websites designed for brands across different sectors." }
-  },
-
-      projects: { ar: "مشاريع", en: "projects" },
+    text: { ar: "مجموعة مختارة من الهويات والمطبوعات والمواقع التي صممتها لعلامات في قطاعات مختلفة.", en: "A selection of identities, print and websites designed for brands across different sectors." },
+    // نصوص المجلدات
+    projects: { ar: "مشاريع", en: "projects" },
     coverTab: { ar: "ملف الأعمال", en: "Portfolio" },
     folderHint: { ar: "اختر مجلداً لاستعراض الأعمال", en: "Pick a folder to browse the work" },
     scrollHint: { ar: "مرّر لاستعراض المشاريع", en: "Scroll to browse" },
-    empty: { ar: "قريباً", en: "Coming soon" 
-
+    empty: { ar: "قريباً", en: "Coming soon" },
+    listTitle: { ar: "العملاء", en: "Clients" },
+    fullProject: { ar: "عرض المشروع كاملاً", en: "View full project" }
   },
+
 
   /* ---------- صفحة من أنا ---------- */
   about: {

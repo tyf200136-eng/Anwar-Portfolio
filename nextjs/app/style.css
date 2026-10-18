@@ -460,8 +460,7 @@ ul{margin:0;padding:0;list-style:none}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-}
-/* ---------- 16. مجلدات الأعمال ---------- */
+}/* ---------- 16. مجلدات الأعمال ---------- */
 .folders{--tab-h:clamp(44px,4vw,60px);--body-h:clamp(110px,10vw,170px);padding-block:var(--space-xs) var(--space-s)}
 .folder{position:relative;display:block;width:100%;margin:0;padding:0;border:0;background:none;color:var(--fg);font:inherit;text-align:start;cursor:pointer;transition:translate .35s cubic-bezier(.2,.7,.2,1)}
 .folder+.folder{margin-top:calc(var(--body-h) * -0.5)}
@@ -480,20 +479,60 @@ ul{margin:0;padding:0;list-style:none}
 .folder__hint{font-size:var(--fs-h3);font-weight:300;line-height:var(--lh-head);max-width:18ch}
 @media (max-width:599.98px){.folder__tab{margin-inline-start:calc(var(--tab,0) * .5)}}
 
-/* محتوى المجلد: بطاقات تتحرك مع السكرول */
+/* محتوى المجلد: قائمة العملاء + بطاقات تتحرك مع السكرول */
 .deck-open{overflow:clip}
-.deck{position:fixed;inset:0;z-index:60;overflow-y:auto;overscroll-behavior:contain;background:var(--bg);color:var(--fg);outline:none;visibility:hidden;translate:0 100%;transition:translate .7s cubic-bezier(.7,0,.2,1),visibility 0s .7s}
+.deck{--bar-h:calc(var(--btn-h) + var(--header-top) * 2);position:fixed;inset:0;z-index:60;overflow-y:auto;overscroll-behavior:contain;background:var(--bg);color:var(--fg);outline:none;visibility:hidden;translate:0 100%;transition:translate .7s cubic-bezier(.7,0,.2,1),visibility 0s .7s}
 .deck.is-open{visibility:visible;translate:none;transition:translate .7s cubic-bezier(.7,0,.2,1),visibility 0s}
-.deck__bar{position:sticky;top:0;z-index:200;display:flex;align-items:center;gap:1rem;height:calc(var(--btn-h) + var(--header-top) * 2);padding-inline:var(--gutter)}
-.deck__back{background:var(--c-white);color:var(--c-ink)}
-.deck__title{display:flex;flex-direction:column;font-size:var(--fs-small);font-weight:500;letter-spacing:var(--ls-caps);text-transform:uppercase;line-height:1.4}
+.deck.has-gal{overflow:hidden}
+.deck__bar,.gal__bar{position:sticky;top:0;z-index:200;display:flex;align-items:center;gap:1rem;height:var(--bar-h);padding-inline:var(--gutter)}
+.deck__back{flex:none;background:var(--c-white);color:var(--c-ink)}
+.deck__title{display:flex;flex-direction:column;min-width:0;font-size:var(--fs-small);font-weight:500;letter-spacing:var(--ls-caps);text-transform:uppercase;line-height:1.4}
 .deck__count{opacity:.7;direction:ltr;unicode-bidi:isolate;text-align:start}
-.deck__track{position:relative;height:calc(100dvh + (var(--n) - 1) * 60dvh);margin-top:calc((var(--btn-h) + var(--header-top) * 2) * -1)}
-.deck__stage{position:sticky;top:0;height:100dvh;overflow:hidden}
-.deck__card{position:absolute;top:50%;left:50%;width:min(66vw,50dvh,460px);display:flex;flex-direction:column;gap:.7rem;padding:clamp(10px,1vw,16px);border-radius:var(--radius);background:var(--c-white);color:var(--c-ink);text-decoration:none;box-shadow:0 30px 60px -30px rgba(0,0,0,.4);transform:translate(-50%,-50%);will-change:transform,opacity}
+.deck__track{position:relative;height:calc(100dvh + (var(--n) - 1) * 60dvh);margin-top:calc(var(--bar-h) * -1)}
+.deck__stage{position:sticky;top:0;display:grid;grid-template-rows:auto 1fr;height:100dvh;padding-top:var(--bar-h);overflow:hidden}
+
+/* قائمة العملاء — الجوال: شريط أفقي فوق البطاقات */
+.deck__list-wrap{position:relative;z-index:150;min-width:0;padding-inline:var(--gutter)}
+.deck__list-title{display:none}
+.deck__list{position:relative;overflow-x:auto;scrollbar-width:none}
+.deck__list::-webkit-scrollbar{display:none}
+.deck__list ol{position:relative;z-index:1;display:flex;gap:.4rem;margin:0;padding:.25rem 0;list-style:none}
+.deck__list button{display:inline-flex;align-items:center;gap:.6em;height:40px;padding-inline:1rem;border:1px solid currentColor;border-radius:99px;background:none;color:inherit;font:inherit;font-size:var(--fs-small);white-space:nowrap;opacity:.6;cursor:pointer;transition:opacity var(--speed),background var(--speed),color var(--speed)}
+.deck__list button small{font-size:.8em;opacity:.7}
+.deck__list button.is-active{opacity:1;background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.deck__ind{display:none}
+
+/* البطاقات */
+.deck__cards{position:relative;overflow:hidden}
+.deck__card{position:absolute;top:50%;left:50%;display:flex;flex-direction:column;gap:.7rem;width:min(66vw,46dvh,440px);padding:clamp(10px,1vw,16px);border:0;border-radius:var(--radius);background:var(--c-white);color:var(--c-ink);font:inherit;text-align:start;cursor:pointer;box-shadow:0 30px 60px -30px rgba(0,0,0,.4);transform:translate(-50%,-50%);will-change:transform,opacity}
 .deck__img{display:block;aspect-ratio:4/5;border-radius:calc(var(--radius) * .6);overflow:hidden;background:rgba(0,0,0,.05)}
-.deck__img img{width:100%;height:100%;object-fit:cover}
+.deck__img img{width:100%;height:100%;object-fit:cover;transition:scale .6s cubic-bezier(.2,.7,.2,1)}
+@media (hover:hover){.deck__card.is-current:hover .deck__img img{scale:1.04}}
 .deck__cap{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding-inline:.2rem;font-size:var(--fs-small)}
 .deck__cap span{opacity:.6}
 .deck__empty{position:absolute;inset:0;display:grid;place-items:center;margin:0;font-size:var(--fs-h3)}
 .deck__hint{position:fixed;inset-inline:0;bottom:var(--header-top);margin:0;text-align:center;font-size:var(--fs-small);opacity:.7;pointer-events:none}
+
+/* الكمبيوتر والآيباد الأفقي: القائمة عمود جانبي ومؤشر يتحرك معها */
+@media (min-width:900px){
+  .deck__stage{grid-template-rows:none;grid-template-columns:minmax(240px,30%) 1fr}
+  .deck__list-wrap{align-self:center;padding-inline:var(--gutter) 0}
+  .deck__list-title{display:block;margin-bottom:1rem;font-size:var(--fs-small);letter-spacing:var(--ls-caps);text-transform:uppercase;opacity:.6}
+  .deck__list{overflow:visible}
+  .deck__list ol{flex-direction:column;gap:0}
+  .deck__list button{justify-content:space-between;width:100%;height:auto;padding:.7rem 1.1rem;border:0;border-radius:var(--radius);background:none;font-size:clamp(18px,1.5vw,28px);font-weight:500;line-height:1.3;white-space:normal;text-align:start;opacity:.45}
+  .deck__list button:hover{opacity:.85}
+  .deck__list button.is-active{opacity:1;background:none;color:var(--bg)}
+  .deck__ind{display:block;position:absolute;top:0;inset-inline:0;height:0;border-radius:var(--radius);background:var(--fg);transition:transform .45s cubic-bezier(.2,.7,.2,1),height .45s cubic-bezier(.2,.7,.2,1)}
+  .deck__card{width:min(34vw,52dvh,440px)}
+}
+
+/* تصاميم العميل (تنفتح عند الضغط على البطاقة) */
+.gal{position:fixed;inset:0;z-index:300;overflow-y:auto;overscroll-behavior:contain;background:var(--bg);color:var(--fg);outline:none;visibility:hidden;opacity:0;translate:0 40px;transition:opacity .4s ease,translate .5s cubic-bezier(.2,.7,.2,1),visibility 0s .5s}
+.gal.is-open{visibility:visible;opacity:1;translate:none;transition:opacity .4s ease,translate .5s cubic-bezier(.2,.7,.2,1),visibility 0s}
+.gal__bar{background:none}
+.gal__full{flex:none;margin-inline-start:auto;font-size:var(--fs-small);--c-link-hover:currentColor}
+.gal__track{position:relative;height:calc(100dvh + (var(--n) - 1) * 50dvh);margin-top:calc(var(--bar-h) * -1)}
+.gal__stage{position:sticky;top:0;height:100dvh;overflow:hidden}
+.gal__item{position:absolute;top:52%;left:50%;display:block;width:auto;height:auto;max-width:min(80vw,560px);max-height:60dvh;border-radius:calc(var(--radius) * .5);box-shadow:0 24px 50px -24px rgba(0,0,0,.45);cursor:pointer;transform:translate(-50%,-50%);will-change:transform,opacity;user-select:none}
+.gal__item.is-current{cursor:default}
