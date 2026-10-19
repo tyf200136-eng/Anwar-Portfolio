@@ -11,10 +11,10 @@
 const SITE = {
   /* ---------- معلومات المصمم ---------- */
   brand: {
-    name: { ar: "سارة ناصر", en: "Sara Nasser" },
+    name: { ar: "أنوار سيراج", en: "Sara Nasser" },
     // الكلمتان الكبيرتان في أعلى الصفحة الرئيسية
-    wordTop: { ar: "سارة", en: "Sara" },
-    wordBottom: { ar: "ناصر", en: "Nasser" },
+    wordTop: { ar: "أنوار", en: "Sara" },
+    wordBottom: { ar: "سيراج", en: "Nasser" },
     role: { ar: "مصممة جرافيك وهويات بصرية", en: "Graphic & brand designer" },
     email: "hello@example.com",
     phone: "+966 50 000 0000",
@@ -88,7 +88,7 @@ const SITE = {
     aboutEyebrow: { ar: "من أنا", en: "About" },
     aboutTitle: { ar: "مصممة تهتم بالتفاصيل", en: "A designer who sweats the details" },
     aboutText: {
-      ar: "أنا سارة، تعلّمت المهنة في وكالات تصميم كبيرة وعملت مع علامات معروفة في المنطقة. اليوم أعمل من استوديو صغير في الرياض، بنفس المعايير، لكل علامة تؤمن أن التصميم أكثر من مجرد شعار.",
+      ar: "أنا أنوار، تعلّمت المهنة في وكالات تصميم كبيرة وعملت مع علامات معروفة في المنطقة. اليوم أعمل من استوديو صغير في الرياض، بنفس المعايير، لكل علامة تؤمن أن التصميم أكثر من مجرد شعار.",
       en: "I'm Sara. I learned the craft in large design agencies, working with well-known brands across the region. Today I work from a small studio in Riyadh with the same standards, for every brand that believes design is more than a logo."
     },
     aboutImage: "assets/img/studio.svg",
@@ -273,7 +273,7 @@ const SITE = {
   /* ---------- آراء العملاء (تجريبية — استبدلها بآراء حقيقية) ---------- */
   testimonials: [
     { name: { ar: "اسم العميل", en: "Client name" }, company: { ar: "نخلة كوفي", en: "Nakhla Coffee" },
-      quote: { ar: "فهمت سارة ما نريده من أول اجتماع. الهوية الجديدة تشبهنا تماماً، وعملاؤنا لاحظوا الفرق فوراً.", en: "Sara understood what we wanted from the very first meeting. The new identity feels exactly like us, and our customers noticed straight away." } },
+      quote: { ar: "فهمت أنوار ما نريده من أول اجتماع. الهوية الجديدة تشبهنا تماماً، وعملاؤنا لاحظوا الفرق فوراً.", en: "Sara understood what we wanted from the very first meeting. The new identity feels exactly like us, and our customers noticed straight away." } },
     { name: { ar: "اسم العميل", en: "Client name" }, company: { ar: "أكاديمية مسار", en: "Masar Academy" },
       quote: { ar: "تخطيط واضح وتواصل ممتاز والتزام بالمواعيد. والنتيجة كانت أجمل مما تخيلنا.", en: "Clear planning, great communication and always on time. The result was more beautiful than we imagined." } },
     { name: { ar: "اسم العميل", en: "Client name" }, company: { ar: "مهرجان السدو", en: "Sadu Festival" },
@@ -312,7 +312,7 @@ const SITE = {
   /* ---------- صفحة من أنا ---------- */
   about: {
     eyebrow: { ar: "من أنا", en: "About" },
-    title: { ar: "أهلاً، أنا سارة", en: "Hi, I'm Sara" },
+    title: { ar: "أهلاً، أنا أنوار", en: "Hi, I'm Sara" },
     intro: { ar: "مصممة جرافيك متخصصة في الهويات البصرية، أؤمن أن التصميم الجيد يبدأ بالإصغاء.", en: "A graphic designer specialising in brand identity. I believe good design starts with listening." },
     portrait: "assets/img/portrait.svg",
     story: {

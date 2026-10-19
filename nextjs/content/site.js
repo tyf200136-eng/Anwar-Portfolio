@@ -163,6 +163,106 @@ const SITE = {
         { src: "assets/img/work/crumeli/cr5.jpg" }
       ]
     },
+        {
+      slug: "luqma-laffa", year: "2026", featured: true, display: "long",
+      title: { ar: "لقمة ولفة", en: "Luqma & Laffa" },
+      category: { ar: "هوية بصرية", en: "Visual identity" },
+      client: { ar: "مطعم لقمة ولفة", en: "Luqma & Laffa Restaurant" },
+      services: ["identity"],
+      cover: "assets/img/work/luqma-laffa/cover6.jpg", video: "",
+      summary: { ar: "هوية بصرية لمطعم برغر وشاورما، شعارها «النكهة تبدأ من هنا».", en: "A visual identity for a burger and shawarma restaurant, built around the line “Flavor starts here.”" },
+      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
+      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
+      gallery: [
+        { src: "assets/img/work/luqma-laffa/la1.jpg" },
+        { src: "assets/img/work/luqma-laffa/la2.jpg" },
+        { src: "assets/img/work/luqma-laffa/la3.jpg" },
+        { src: "assets/img/work/luqma-laffa/la4.jpg" },
+        { src: "assets/img/work/luqma-laffa/la5.jpg" }
+      ]
+    },
+        {
+      slug: "jal-alfakher", year: "2026", featured: true, display: "long",
+      title: { ar: "جال الفاخر", en: "Jal Alfakher" },
+      category: { ar: "هوية بصرية", en: "Visual identity" },
+      client: { ar: "ملحمة جال الفاخر", en: "Jal Alfakher Butchery" },
+      services: ["identity"],
+      cover: "assets/img/work/jal-alfakher/cover7.jpg", video: "",
+      summary: { ar: "هوية بصرية لملحمة تقدم جميع أنواع اللحوم الطازجة، شعارها يجمع حرف الجيم مع ساطور التقطيع.", en: "A visual identity for a butchery offering all kinds of fresh meat, with a mark that merges the letter J with a butcher's cleaver." },
+      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
+      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
+      gallery: [
+        { src: "assets/img/work/jal-alfakher/ja1.jpg" },
+        { src: "assets/img/work/jal-alfakher/ja2.jpg" },
+        { src: "assets/img/work/jal-alfakher/ja3.jpg" }
+      ]
+    },
+        {
+      slug: "le-voile", year: "2026", featured: true, display: "long",
+      title: { ar: "لو فوال", en: "Le Voile" },
+      category: { ar: "هوية بصرية", en: "Visual identity" },
+      client: { ar: "لو فوال", en: "Le Voile" },
+      services: ["identity"],
+      cover: "assets/img/work/le-voile/cover8.jpg", video: "",
+      summary: { ar: "هوية بصرية ناعمة لعلامة أقمشة وطرح، بألوان الوردي والأخضر الهادئ وعبارة «A Veil of Elegance».", en: "A soft visual identity for a fabric and veil brand, in calm pink and sage tones, built around the line “A Veil of Elegance.”" },
+      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
+      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
+      gallery: [
+        { src: "assets/img/work/le-voile/vo1.jpg" },
+        { src: "assets/img/work/le-voile/vo2.jpg" },
+        { src: "assets/img/work/le-voile/vo3.jpg" },
+        { src: "assets/img/work/le-voile/vo4.jpg" },
+        { src: "assets/img/work/le-voile/vo5.jpg" },
+        { src: "assets/img/work/le-voile/vo6.jpg" }
+      ]
+    },
+        {
+      slug: "levan", year: "2026", featured: true, display: "long",
+      title: { ar: "ليفان", en: "Levan" },
+      category: { ar: "هوية بصرية", en: "Visual identity" },
+      client: { ar: "ليفان — مخبز وقهوة", en: "Levan — Bakery & coffee" },
+      services: ["identity"],
+      cover: "assets/img/work/levan/cover9.jpg", video: "",
+      summary: { ar: "هوية بصرية لمخبز كرواسون وقهوة، بألوان القشرة الذهبية والكريمة الفرنسية والأزرق الهادئ، وعبارة «ليفان بيومك».", en: "A visual identity for a croissant bakery and café, in golden crust, French cream and calm blue tones, with the line “Levan Beyomk.”" },
+      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
+      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
+      gallery: [
+        { src: "assets/img/work/levan/va1.jpg" },
+        { src: "assets/img/work/levan/va2.jpg" },
+        { src: "assets/img/work/levan/va3.jpg" },
+        { src: "assets/img/work/levan/va4.jpg" },
+        { src: "assets/img/work/levan/va5.jpg" },
+        { src: "assets/img/work/levan/va6.jpg" },
+        { src: "assets/img/work/levan/va7.jpg" }
+      ]
+    },
+        {
+      slug: "azm", year: "2026", featured: true, display: "long",
+      title: { ar: "عزم", en: "AZM" },
+      category: { ar: "هوية بصرية", en: "Visual identity" },
+      client: { ar: "تطبيق عزم لخدمات السيارات", en: "AZM car services app" },
+      services: ["identity"],
+      cover: "assets/img/work/azm/cover10.jpg", video: "",
+      summary: { ar: "دليل هوية بصرية لتطبيق عزم، المنصة الذكية التي تربط العملاء بمقدمي خدمات السيارات والورش والسطحات بتجربة سلسة وموثوقة.", en: "Brand guidelines for AZM, a smart platform connecting customers with car service providers, workshops and towing services through a seamless, reliable experience." },
+      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
+      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
+      gallery: [
+        { src: "assets/img/work/azm/azm1.jpg" },
+        { src: "assets/img/work/azm/azm2.jpg" },
+        { src: "assets/img/work/azm/azm3.jpg" },
+        { src: "assets/img/work/azm/azm4.jpg" },
+        { src: "assets/img/work/azm/azm5.jpg" },
+        { src: "assets/img/work/azm/azm6.jpg" },
+        { src: "assets/img/work/azm/azm7.jpg" },
+        { src: "assets/img/work/azm/azm8.jpg" },
+        { src: "assets/img/work/azm/azm9.jpg" },
+        { src: "assets/img/work/azm/azm10.jpg" },
+        { src: "assets/img/work/azm/azm11.jpg" },
+        { src: "assets/img/work/azm/azm12.jpg" },
+        { src: "assets/img/work/azm/azm13.jpg" },
+        { src: "assets/img/work/azm/azm14.jpg" },
+      ]
+    },
     {
       slug: "coffee", year: "2026", featured: true,
       title: { ar: "عنوان القهوة", en: "Coffee Address" },
