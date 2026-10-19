@@ -82,6 +82,7 @@ export default function Folders({ folders, labels }) {
   // حركة تصاميم العميل: التصميم الحالي كبير في النص، واللي قبله وبعده يطلّون كشرائح من فوق وتحت
   useEffect(() => {
     if (gal < 0 || open < 0) return;
+    if (folders[open].items[gal].display === "long") return; // العرض الطويل ما يحتاج حركة
     const el = galRef.current;
     const n = folders[open].items[gal].gallery.length;
     const imgs = galItemsRef.current.slice(0, n);
@@ -248,22 +249,29 @@ export default function Folders({ folders, labels }) {
         {items.length > 1 && <p className="deck__hint">{labels.scrollHint}</p>}
 
         {/* تصاميم العميل */}
-        <div ref={galRef} className={`gal${gal >= 0 ? " is-open" : ""}`} tabIndex={-1} inert={gal < 0} role="dialog" aria-modal="true" aria-label={g?.title}
+        <div ref={galRef} className={`gal${gal >= 0 ? " is-open" : ""}${g?.display === "long" ? " gal--long" : ""}`} tabIndex={-1} inert={gal < 0} role="dialog" aria-modal="true" aria-label={g?.title}
           style={{ "--n": Math.max(g ? g.gallery.length : 1, 1) }}>
           <div className="gal__bar">
             <button type="button" className="icon-btn deck__back" onClick={() => setGal(-1)} aria-label={labels.back}><BackIcon /></button>
-            <div className="deck__title"><span>{g?.title}</span><span ref={galCounterRef} className="deck__count" /></div>
+            <div className="deck__title"><span>{g?.title}</span>{g?.display !== "long" && <span ref={galCounterRef} className="deck__count" />}</div>
             {g && <Link className="link-arrow gal__full" href={g.href}>{labels.fullProject}<DiagIcon /></Link>}
           </div>
-          <div className="gal__track">
-            <div className="gal__stage">
-              {g?.gallery.map((src, i) => (
-                <img key={`${g.slug}-${i}`} src={src} alt={`${g.title} ${i + 1}`} className="gal__item"
-                  ref={(el) => { galItemsRef.current[i] = el; }} onClick={() => galGoTo(i)} />
-              ))}
+          {g?.display === "long" ? (
+            // عرض طويل متصل (للهويات): الصفحات تحت بعض بدون فراغات
+            <div className="gal__long">
+              {g.gallery.map((src, i) => <img key={`${g.slug}-${i}`} src={src} alt={`${g.title} ${i + 1}`} loading="lazy" />)}
             </div>
-          </div>
-          {g && g.gallery.length > 1 && <p className="deck__hint">{labels.scrollHint}</p>}
+          ) : (
+            <div className="gal__track">
+              <div className="gal__stage">
+                {g?.gallery.map((src, i) => (
+                  <img key={`${g.slug}-${i}`} src={src} alt={`${g.title} ${i + 1}`} className="gal__item"
+                    ref={(el) => { galItemsRef.current[i] = el; }} onClick={() => galGoTo(i)} />
+                ))}
+              </div>
+            </div>
+          )}
+          {g && g.display !== "long" && g.gallery.length > 1 && <p className="deck__hint">{labels.scrollHint}</p>}
         </div>
       </div>
     </>

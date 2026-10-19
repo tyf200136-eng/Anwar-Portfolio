@@ -460,7 +460,8 @@ ul{margin:0;padding:0;list-style:none}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-}/* ---------- 16. مجلدات الأعمال ---------- */
+}
+/* ---------- 16. مجلدات الأعمال ---------- */
 .folders{--tab-h:clamp(44px,4vw,60px);--body-h:clamp(110px,10vw,170px);padding-block:var(--space-xs) var(--space-s)}
 .folder{position:relative;display:block;width:100%;margin:0;padding:0;border:0;background:none;color:var(--fg);font:inherit;text-align:start;cursor:pointer;transition:translate .35s cubic-bezier(.2,.7,.2,1)}
 .folder+.folder{margin-top:calc(var(--body-h) * -0.5)}
@@ -536,3 +537,11 @@ ul{margin:0;padding:0;list-style:none}
 .gal__stage{position:sticky;top:0;height:100dvh;overflow:hidden}
 .gal__item{position:absolute;top:52%;left:50%;display:block;width:auto;height:auto;max-width:min(80vw,560px);max-height:60dvh;border-radius:calc(var(--radius) * .5);box-shadow:0 24px 50px -24px rgba(0,0,0,.45);cursor:pointer;transform:translate(-50%,-50%);will-change:transform,opacity;user-select:none}
 .gal__item.is-current{cursor:default}
+
+/* عرض طويل متصل (للهويات): display: "long" في site.js */
+.gal--long .gal__bar{background:var(--bg)}
+.gal__long{max-width:1200px;margin-inline:auto;padding:clamp(8px,1vw,16px) var(--gutter) var(--space-s)}
+.gal__long img,.gallery-long img{display:block;width:100%;height:auto}
+.gal__long img:first-child,.gallery-long img:first-child{border-start-start-radius:var(--radius);border-start-end-radius:var(--radius)}
+.gal__long img:last-child,.gallery-long img:last-child{border-end-start-radius:var(--radius);border-end-end-radius:var(--radius)}
+.gallery-long{max-width:1200px;margin-inline:auto}

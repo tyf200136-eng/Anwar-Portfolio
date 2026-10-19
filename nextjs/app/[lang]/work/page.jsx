@@ -29,7 +29,9 @@ export default async function Work({ params }) {
         cover: src(c.cover),
         href: casePath(lang, c.slug),
         // تصاميم العميل اللي تنفتح عند الضغط على البطاقة (من gallery في site.js)
-        gallery: (c.gallery && c.gallery.length ? c.gallery.map((g) => src(g.src)) : [src(c.cover)])
+        gallery: (c.gallery && c.gallery.length ? c.gallery.map((g) => src(g.src)) : [src(c.cover)]),
+        // "long" = الصفحات تحت بعض بدون فراغات (للهويات)، وغيره = حركة البطاقات
+        display: c.display || "cards"
       }))
   }));
 

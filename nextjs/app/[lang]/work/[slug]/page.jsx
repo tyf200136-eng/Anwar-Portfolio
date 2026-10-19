@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SITE from "@/content/site";
-import { tr, pagePath, casePath, locales } from "@/lib/i18n";
+import { tr, pagePath, casePath, locales, src } from "@/lib/i18n";
 import { Media, Shape, IconBack, Follow } from "@/components/ui";
 
 export function generateStaticParams() {
@@ -63,11 +63,18 @@ export default async function CasePage({ params }) {
       </section>
 
       <section className="section wrap">
-        <div className="gallery">
-          {(c.gallery || []).map((g, i) => (
-            <Media key={i} className={g.size === "full" ? "is-full" : ""} path={g.src} alt={t(c.title)} data-clip="" />
-          ))}
-        </div>
+        {c.display === "long" ? (
+          // عرض طويل متصل: الصفحات تحت بعض بمقاسها الأصلي وبدون فراغات
+          <div className="gallery-long">
+            {(c.gallery || []).map((g, i) => <img key={i} src={src(g.src)} alt={`${t(c.title)} ${i + 1}`} loading="lazy" />)}
+          </div>
+        ) : (
+          <div className="gallery">
+            {(c.gallery || []).map((g, i) => (
+              <Media key={i} className={g.size === "full" ? "is-full" : ""} path={g.src} alt={t(c.title)} data-clip="" />
+            ))}
+          </div>
+        )}
       </section>
 
       <section className="section wrap">

@@ -144,12 +144,27 @@ const SITE = {
   ],
 
   /* ---------- الأعمال ---------- */
-  // services: أسماء slug من قائمة الخدمات أعلاه (تُستخدم في الوسوم والفلترة)
-  // video: اختياري — ضع مسار ملف mp4 ليظهر بدل صورة الغلاف
-  // gallery size: full (عرض كامل) أو half (نصف عرض)
   cases: [
+        {
+      slug: "crumeli", year: "2026", featured: true, display: "long",
+      title: { ar: "كرومِلي", en: "Crumeli" },
+      category: { ar: "هوية بصرية", en: "Visual identity" },
+      client: { ar: "كرومِلي — كوكيز مصنوعة يدوياً", en: "Crumeli — Handmade cookies" },
+      services: ["identity"],
+      cover: "assets/img/work/crumeli/cover5.jpg", video: "",
+      summary: { ar: "هوية بصرية لعلامة كوكيز مصنوعة يدوياً، مستوحاة من فتات الكوكيز.", en: "A visual identity for a handmade cookie brand, inspired by cookie crumbs." },
+      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
+      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
+      gallery: [
+        { src: "assets/img/work/crumeli/cr1.jpg" },
+        { src: "assets/img/work/crumeli/cr2.jpg" },
+        { src: "assets/img/work/crumeli/cr3.jpg" },
+        { src: "assets/img/work/crumeli/cr4.jpg" },
+        { src: "assets/img/work/crumeli/cr5.jpg" }
+      ]
+    },
     {
-      slug: "coffee", year: "2025", featured: true,
+      slug: "coffee", year: "2026", featured: true,
       title: { ar: "عنوان القهوة", en: "Coffee Address" },
       category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social media posts" },
       client: { ar: "عنوان القهوة", en: "Coffee Address" },
@@ -159,12 +174,134 @@ const SITE = {
       challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
       solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
       gallery: [
-        { src: "assets/img/work/coffee/1.png", size: "half" },
-        { src: "assets/img/work/coffee/2.png", size: "half" },
-        { src: "assets/img/work/coffee/3.png", size: "half" },
-        { src: "assets/img/work/coffee/4.png", size: "half" },
-        { src: "assets/img/work/coffee/5.png", size: "half" },
-        { src: "assets/img/work/coffee/6.png", size: "half" }
+        { src: "assets/img/work/coffee/co1.png", size: "half" },
+        { src: "assets/img/work/coffee/co2.png", size: "half" },
+        { src: "assets/img/work/coffee/co3.png", size: "half" },
+        { src: "assets/img/work/coffee/co4.png", size: "half" },
+        { src: "assets/img/work/coffee/co5.png", size: "half" },      ]
+    },
+    {
+      slug: "GLOW", 
+      year: "2026", 
+      featured: true,
+      title: { ar: "عيادات GLOW", en: "Glow Clinics" },
+      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social Media Posts" },
+      client: { ar: "عيادات GLOW", en: "Glow Clinics" },
+      services: ["social"],
+      cover: "assets/img/work/GLOW/cover1.png", 
+      video: "",
+      summary: { 
+        ar: "تصميم محتوى رقمي جذاب لحسابات عيادات GLOW يعكس الفخامة والاحترافية في العناية بالبشرة والجمال.", 
+        en: "Engaging social media content design for Glow Clinics, reflecting luxury and medical aesthetics expertise." 
+      },
+      challenge: { 
+        ar: "إبراز العيادة وسط منافسة قوية في قطاع التجميل، وبناء هوية رقمية موثوقة تجمع بين الطابع الطبي واللمسة الجمالية العصرية.", 
+        en: "Standing out in a competitive aesthetic market while building a trustworthy digital identity balancing medical credibility with modern beauty." 
+      },
+      solution: { 
+        ar: "ابتكار خط بصري راقٍ يعتمد ألواناً هادئة ومريحة للعين، مع تقديم محتوى تثقيفي وتسويقي يبرز النتائج الطبيعية واحترافية الفريق الطبي.", 
+        en: "Crafting a sophisticated visual direction with calm tones, supported by educational and promotional content showcasing natural results and medical expertise." 
+      },
+      gallery: [
+        { src: "assets/img/work/GLOW/gl1.png", size: "half" },
+        { src: "assets/img/work/GLOW/gl2.png", size: "half" },
+        { src: "assets/img/work/GLOW/gl3.png", size: "half" },
+        { src: "assets/img/work/GLOW/gl4.png", size: "half" },
+        { src: "assets/img/work/GLOW/gl5.png", size: "half" },
+        { src: "assets/img/work/GLOW/gl6.png", size: "half" },
+        { src: "assets/img/work/GLOW/gl7.png", size: "half" },
+        { src: "assets/img/work/GLOW/gl8.png", size: "half" },
+      ]
+    },
+    {
+      slug: "btack-burger", 
+      year: "2026", 
+      featured: true,
+      title: { ar: "بي تاك برجر", en: "B.TACK Burger" },
+      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social Media Posts" },
+      client: { ar: "بي تاك برجر", en: "B.TACK Burger" },
+      services: ["social"],
+      cover: "assets/img/work/btack/cover2.png", 
+      video: "",
+      summary: { 
+        ar: "سلسلة تصاميم ومحتوى رقمي جذاب لحسابات بي تاك برجر يبرز شهية الوجبات والهوية العصرية للبراند.", 
+        en: "Creative social media campaign and visual content for B.TACK Burger, highlighting appetizing meals and bold brand identity." 
+      },
+      challenge: { 
+        ar: "لفت انتباه العملاء في قطاع برجر مليء بالمنافسة، وإبراز جودة المكونات وتفاصيل الطعم بطريقة تفتح الشهية وتحفّز على الشراء.", 
+        en: "Capturing attention in a highly saturated burger market and showcasing ingredient freshness to trigger appetite and drive orders." 
+      },
+      solution: { 
+        ar: "اعتماد خط بصري جريء وقوي مع التركيز على لقطات تفصيلية شهية (Food Visuals)، واستخدام نصوص تسويقية سريعة وحماسية تزيد من تفاعل الجمهور والطلب المباشر.", 
+        en: "Crafting a bold visual style with high-contrast, mouth-watering food shots paired with energetic hooks that boost engagement and conversions." 
+      },
+      gallery: [
+        { src: "assets/img/work/btack/bt1.png", size: "half" },
+        { src: "assets/img/work/btack/bt2.png", size: "half" },
+        { src: "assets/img/work/btack/bt3.png", size: "half" },
+        { src: "assets/img/work/btack/bt4.png", size: "half" },
+        { src: "assets/img/work/btack/bt5.png", size: "half" },
+      ]
+    },
+    {
+      slug: "french-pearl", 
+      year: "2026", 
+      featured: true,
+      title: { ar: "صالون اللؤلؤ الفرنسي", en: "French Pearl Salon" },
+      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social Media Posts" },
+      client: { ar: "صالون اللؤلؤ الفرنسي", en: "French Pearl Salon" },
+      services: ["social"],
+      cover: "assets/img/work/french-pearl/cover3.png", 
+      video: "",
+      summary: { 
+        ar: "تصميم محتوى رقمي فاخر لحسابات صالون اللؤلؤ الفرنسي، يعكس الرقي وأعلى معايير العناية والجمال.", 
+        en: "Luxury social media content design for French Pearl Salon, reflecting elegance and high-end beauty care." 
+      },
+      challenge: { 
+        ar: "نقل تجربة الدلال والفخامة المستوحاة من الطابع الفرنسي إلى العالم الرقمي، وجذب العميلات الباحثات عن خدمات تجميل راقية واستثنائية.", 
+        en: "Translating the luxurious French pampering experience into a digital presence that attracts clients seeking premium beauty services." 
+      },
+      solution: { 
+        ar: "ابتكار خط بصري ناعم وأنيق يجمع درجات الألوان الهادئة مع لمسات فخمة، وإبراز جودة الخدمات وتفاصيل النتائج لبناء الثقة وجذب الحجوزات المستمرة.", 
+        en: "Crafting a soft, chic aesthetic combining delicate tones with elegant accents, highlighting meticulous service results to build trust and drive bookings." 
+      },
+      gallery: [
+        { src: "assets/img/work/french-pearl/fp1.png", size: "half" },
+        { src: "assets/img/work/french-pearl/fp2.png", size: "half" },
+        { src: "assets/img/work/french-pearl/fp3.png", size: "half" },
+        { src: "assets/img/work/french-pearl/fp4.png", size: "half" },
+        { src: "assets/img/work/french-pearl/fp5.png", size: "half" },
+        { src: "assets/img/work/french-pearl/fp6.png", size: "half" },
+      ]
+    },
+    {
+      slug: "alothman-law", 
+      year: "2026", 
+      featured: true,
+      title: { ar: "العثمان للمحاماة والاستشارات القانونية", en: "Al-Othman Law Firm" },
+      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social Media Posts" },
+      client: { ar: "العثمان للمحاماة", en: "Al-Othman Law Firm" },
+      services: ["social"],
+      cover: "assets/img/work/alothman/cover4.png", 
+      video: "",
+      summary: { 
+        ar: "صناعة محتوى قانوني احترافي لحسابات العثمان للمحاماة يعزز الموثوقية ويبسط المفاهيم القانونية لرواد الأعمال والأفراد.", 
+        en: "Professional legal content design for Al-Othman Law Firm, establishing credibility and simplifying legal concepts." 
+      },
+      challenge: { 
+        ar: "الموازنة بين رصانة وهيبة المهنة القانونية، وبين تقديم محتوى رقمي جذاب، مفهوم، ومواكب يكسر الجمود ويوضح الأنظمة المعقدة.", 
+        en: "Balancing traditional legal formality with engaging, digestible content that simplifies complex regulations for individuals and businesses." 
+      },
+      solution: { 
+        ar: "تطوير أسلوب بصري رزين يعتمد ألواناً تعكس الثقة والوقار، مع صياغة منشورات توعوية وإنفوجرافيك واضح يقدم قيمة حقيقية ويعزز مكانة المكتب كمرجع قانوني.", 
+        en: "Developing a prestigious, trust-driven visual style complemented by informative legal infographics that establish the firm as an authoritative reference." 
+      },
+      gallery: [
+        { src: "assets/img/work/alothman/ot1.png", size: "half" },
+        { src: "assets/img/work/alothman/ot2.png", size: "half" },
+        { src: "assets/img/work/alothman/ot3.png", size: "half" },
+        { src: "assets/img/work/alothman/ot4.png", size: "half" },
+        { src: "assets/img/work/alothman/ot5.png", size: "half" },
       ]
     },
     {
