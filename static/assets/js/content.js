@@ -11,7 +11,7 @@
 const SITE = {
   /* ---------- معلومات المصمم ---------- */
   brand: {
-    name: { ar: "أنوار سيراج", en: "Sara Nasser" },
+    name: { ar: "أنوار سيراج", en: "Anwar Siraj" },
     // الكلمتان الكبيرتان في أعلى الصفحة الرئيسية
     wordTop: { ar: "أنوار", en: "Sara" },
     wordBottom: { ar: "سيراج", en: "Nasser" },

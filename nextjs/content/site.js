@@ -11,7 +11,7 @@
 const SITE = {
   /* ---------- معلومات المصمم ---------- */
   brand: {
-    name: { ar: "أنوار سيراج", en: "Sara Nasser" },
+    name: { ar: "أنوار سيراج", en: "Anwar Siraj" },
     // الكلمتان الكبيرتان في أعلى الصفحة الرئيسية
     wordTop: { ar: "أنوار", en: "Sara" },
     wordBottom: { ar: "سيراج", en: "Nasser" },
@@ -404,55 +404,7 @@ const SITE = {
         { src: "assets/img/work/alothman/ot5.png", size: "half" },
       ]
     },
-    {
-      slug: "masar-academy", year: "2025", featured: true,
-      title: { ar: "أكاديمية مسار", en: "Masar Academy" },
-      category: { ar: "تعليم", en: "Education" },
-      client: { ar: "أكاديمية مسار", en: "Masar Academy" },
-      services: ["identity", "web"],
-      cover: "assets/img/masar-academy-cover.svg", video: "",
-      summary: { ar: "هوية وموقع لأكاديمية تدريب تقني للشباب.", en: "Identity and website for a tech academy for young people." },
-      challenge: { ar: "جمهور شاب يحتاج علامة جادة وموثوقة، لكن غير مملة.", en: "A young audience that needs a brand that feels credible and serious, but never boring." },
-      solution: { ar: "شعار مبني على فكرة المسار المتصاعد، ونظام ألوان مرح، وموقع واضح يقود الطالب للتسجيل بسهولة.", en: "A mark built on a rising path, a playful colour system and a clear website that guides students to enrol." },
-      gallery: [
-        { src: "assets/img/masar-academy-1.svg", size: "full" },
-        { src: "assets/img/masar-academy-2.svg", size: "half" },
-        { src: "assets/img/masar-academy-3.svg", size: "half" }
-      ]
-    },
-    {
-      slug: "sadu-festival", year: "2024", featured: true,
-      title: { ar: "مهرجان السدو", en: "Sadu Festival" },
-      category: { ar: "ثقافة وفعاليات", en: "Culture & events" },
-      client: { ar: "مهرجان السدو للفنون", en: "Sadu Arts Festival" },
-      services: ["identity", "print", "social"],
-      cover: "assets/img/sadu-festival-cover.svg", video: "",
-      summary: { ar: "هوية مهرجان مستوحاة من نقوش السدو التقليدية.", en: "A festival identity inspired by traditional Sadu weaving patterns." },
-      challenge: { ar: "إعادة تقديم فن السدو لجيل جديد دون أن يبدو كأنه قطعة متحف.", en: "Reintroduce Sadu weaving to a new generation without it feeling like a museum piece." },
-      solution: { ar: "حوّلنا النقوش إلى نظام شبكي مرن يتغير في كل ملصق، مع خط عربي عريض وألوان جريئة.", en: "We turned the patterns into a flexible grid system that changes on every poster, with a bold Arabic typeface and confident colours." },
-      gallery: [
-        { src: "assets/img/sadu-festival-1.svg", size: "full" },
-        { src: "assets/img/sadu-festival-2.svg", size: "half" },
-        { src: "assets/img/sadu-festival-3.svg", size: "half" },
-        { src: "assets/img/sadu-festival-4.svg", size: "full" }
-      ]
-    },
-    {
-      slug: "wafi-clinics", year: "2024", featured: true,
-      title: { ar: "عيادات وافي", en: "Wafi Clinics" },
-      category: { ar: "صحة", en: "Health" },
-      client: { ar: "مجموعة عيادات وافي", en: "Wafi Clinics Group" },
-      services: ["identity", "print", "web"],
-      cover: "assets/img/wafi-clinics-cover.svg", video: "",
-      summary: { ar: "هوية هادئة وإنسانية لمجموعة عيادات عائلية.", en: "A calm, human identity for a group of family clinics." },
-      challenge: { ar: "قطاع صحي يغلب عليه البرود، وعميل يريد أن يشعر المريض بالطمأنينة من أول لحظة.", en: "A clinical sector that often feels cold, and a client who wants patients to feel at ease from the first moment." },
-      solution: { ar: "ألوان ناعمة، وأشكال دائرية، ولافتات واضحة داخل العيادات، وموقع حجز بسيط.", en: "Soft colours, rounded shapes, clear wayfinding inside the clinics and a simple booking website." },
-      gallery: [
-        { src: "assets/img/wafi-clinics-1.svg", size: "full" },
-        { src: "assets/img/wafi-clinics-2.svg", size: "half" },
-        { src: "assets/img/wafi-clinics-3.svg", size: "half" }
-      ]
-    },
+   /*هنا تكمله الاعمال الاخرى */
 
 
   ],
