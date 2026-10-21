@@ -24,10 +24,6 @@ export default function Footer({ lang }) {
       <div className="wrap ftr__grid">
         <div>
           <div className="ftr__brand">{t(b.name)}</div>
-          <p className="now">
-            {t(b.nowPlaying.label)}:{" "}
-            <a href={b.nowPlaying.url} target="_blank" rel="noopener">{b.nowPlaying.artist} — {b.nowPlaying.track}</a>
-          </p>
         </div>
         <div className="ftr__col">
           <h3>{t(SITE.ui.menu)}</h3>

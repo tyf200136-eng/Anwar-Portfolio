@@ -28,12 +28,7 @@ const SITE = {
       { label: "LinkedIn", url: "https://linkedin.com/" },
       { label: "Dribbble", url: "https://dribbble.com/" }
     ],
-    nowPlaying: {
-      label: { ar: "في الاستوديو أستمع الآن إلى", en: "In the studio I'm listening to" },
-      artist: "Fairuz",
-      track: "Shady",
-      url: "https://open.spotify.com/"
-    }
+
   },
 
   /* ---------- القائمة ---------- */

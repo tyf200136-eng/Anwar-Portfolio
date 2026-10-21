@@ -569,7 +569,7 @@ ul{margin:0;padding:0;list-style:none}
   padding-top:calc(var(--header-top) + var(--header-h) + 24px);padding-bottom:clamp(8px,2vw,32px);text-align:center}
 .hx__name{margin:0;font-family:var(--font-display);font-weight:400;font-size:clamp(54px,10vw,190px);line-height:1.02;letter-spacing:-.01em;color:var(--c-ink)}
 [lang="ar"] .hx__name{font-size:clamp(60px,11vw,210px);line-height:1.25;letter-spacing:0}
-.hx__lead{margin:clamp(14px,1.6vw,28px) 0 0;max-width:42ch;font-size:clamp(16px,.9rem + .5vw,24px);line-height:1.55;color:var(--c-ink);opacity:.78;text-wrap:balance}
+.hx__lead{margin:clamp(22px,2.6vw,48px) 0 0;max-width:42ch;font-size:clamp(16px,.9rem + .5vw,24px);line-height:1.55;color:var(--c-ink);opacity:.78;text-wrap:balance}
 
 /* الهالة الملونة الناعمة خلف الاسم */
 .hx__glow{position:absolute;z-index:0;left:50%;top:calc((100svh - var(--arc-h) / 2) * .5);width:min(80vw,820px);aspect-ratio:1;translate:-50% -50%;border-radius:50%;
@@ -592,3 +592,21 @@ ul{margin:0;padding:0;list-style:none}
 @media (max-width:699px){
   :root{--arc-w:clamp(110px,36vw,170px)}
 }
+
+/* =====================================================================
+   18. من أنا في الرئيسية: تصميم نصي بدون صورة
+   ===================================================================== */
+.ab{display:flex;flex-direction:column;align-items:center;max-width:980px;margin-inline:auto;text-align:center}
+.ab__title{margin:clamp(14px,1.6vw,24px) 0 0}
+.ab__line{display:block;width:clamp(48px,6vw,96px);height:1px;margin:clamp(24px,3vw,48px) 0;background:currentColor;opacity:.35}
+.ab__text{margin:0;max-width:44ch;font-size:var(--fs-big);line-height:1.6;opacity:.85}
+.ab__tools{display:flex;flex-direction:column;align-items:center;gap:1rem;margin-top:clamp(28px,3vw,52px);font-size:var(--fs-small)}
+.ab__tools>span{letter-spacing:var(--ls-caps);text-transform:uppercase;opacity:.6}
+.ab__tools ul{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(18px,3vw,48px);margin:0;padding:0;list-style:none}
+.ab__tools li{display:flex;flex-direction:column;align-items:center;gap:.7rem;direction:ltr}
+/* اللوقو يأخذ لون النص تلقائياً (بلون واحد هادئ) */
+.ab__ico{display:block;width:clamp(40px,3.6vw,56px);aspect-ratio:1;background:currentColor;
+  -webkit-mask:var(--ico) center/contain no-repeat;mask:var(--ico) center/contain no-repeat}
+.ab .btn{margin-top:clamp(32px,3.4vw,60px)}
+/* المسافة بين الهلال وقسم "من الفكرة" */
+.hx + .gc{margin-top:clamp(24px,4vw,80px)}
