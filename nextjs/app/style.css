@@ -19,16 +19,16 @@
 /* ---------- 2. المتغيرات (غيّر الألوان والمقاسات من هنا) ---------- */
 :root{
   /* الألوان */
-  --c-bg:#f5f0e8;          /* خلفية الموقع */
-  --c-ink:#161412;         /* النص */
-  --c-primary:#26235c;     /* اللون الأساسي: القسم الملون، الفوتر، الأزرار */
-  --c-accent:#d4f36b;      /* لون التمييز: زر القائمة، الدوائر، الروابط على الخلفية الغامقة */
+  --c-bg:#f3efe8;          /* خلفية الموقع */
+  --c-ink:#1d1b18;         /* النص */
+  --c-primary:#2e2a25;     /* اللون الأساسي: القسم الملون، الفوتر، الأزرار */
+  --c-accent:#d8c3a0;      /* لون التمييز: زر القائمة، الدوائر، الروابط على الخلفية الغامقة */
   --c-coral:#ff7a59;
   --c-lilac:#c6b6ff;
   --c-teal:#0f4d4a;
   --c-apricot:#ffc46b;
-  --c-white:#ffffff;
-  --c-muted:#a39c90;       /* لون النص قبل كشفه بالسكرول */
+  --c-teal:#5d6b57;
+  --c-muted:#b0a89b;       /* لون النص قبل كشفه بالسكرول */
   --c-line:rgba(22,20,18,.16);
 
   --c-text:var(--c-ink);
@@ -545,3 +545,50 @@ ul{margin:0;padding:0;list-style:none}
 .gal__long img:first-child,.gallery-long img:first-child{border-start-start-radius:var(--radius);border-start-end-radius:var(--radius)}
 .gal__long img:last-child,.gallery-long img:last-child{border-end-start-radius:var(--radius);border-end-end-radius:var(--radius)}
 .gallery-long{max-width:1200px;margin-inline:auto}
+
+/* =====================================================================
+   17. الهيرو الجديد: الاسم في النص + شريط الأعمال المقوّس (الهلال)
+   ===================================================================== */
+/* خط الاسم: Marcellus للإنجليزي و Amiri للعربي (المتصفح يختار حسب الحروف) */
+@font-face{font-family:"Marcellus";font-weight:400;font-display:swap;src:url("/assets/fonts/marcellus-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Amiri";font-weight:400;font-display:swap;src:url("/assets/fonts/amiri-arabic-400-normal.woff2") format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFC,U+200C-200E}
+:root{
+  --font-display:"Marcellus","Amiri",Georgia,serif;
+  --hx-glow-1:#e8d9bf;   /* لون الهالة خلف الاسم */
+  --hx-glow-2:#d6dccb;
+  --hx-glow-3:#ead2c4;
+  --arc-w:clamp(112px,13vw,230px);   /* عرض كرت العمل */
+  --arc-ratio:1.25;                  /* الطول ÷ العرض (1.25 = مقاس 4:5) */
+  --arc-h:calc(var(--arc-w) * var(--arc-ratio) * 1.75); /* ارتفاع منطقة الهلال */
+}
+
+.hx{position:relative;overflow:clip;isolation:isolate}
+/* النص يأخذ الشاشة الأولى إلا نصف الهلال، فيظهر نصف الكروت فقط أول ما تفتح الصفحة */
+.hx__text{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:calc(100svh - var(--arc-h) / 2);
+  padding-top:calc(var(--header-top) + var(--header-h) + 24px);padding-bottom:clamp(8px,2vw,32px);text-align:center}
+.hx__name{margin:0;font-family:var(--font-display);font-weight:400;font-size:clamp(54px,10vw,190px);line-height:1.02;letter-spacing:-.01em;color:var(--c-ink)}
+[lang="ar"] .hx__name{font-size:clamp(60px,11vw,210px);line-height:1.25;letter-spacing:0}
+.hx__lead{margin:clamp(14px,1.6vw,28px) 0 0;max-width:42ch;font-size:clamp(16px,.9rem + .5vw,24px);line-height:1.55;color:var(--c-ink);opacity:.78;text-wrap:balance}
+
+/* الهالة الملونة الناعمة خلف الاسم */
+.hx__glow{position:absolute;z-index:0;left:50%;top:calc((100svh - var(--arc-h) / 2) * .5);width:min(80vw,820px);aspect-ratio:1;translate:-50% -50%;border-radius:50%;
+  background:radial-gradient(closest-side at 38% 40%,var(--hx-glow-1),transparent),radial-gradient(closest-side at 64% 42%,var(--hx-glow-2),transparent),radial-gradient(closest-side at 50% 66%,var(--hx-glow-3),transparent);
+  filter:blur(40px);opacity:.9;pointer-events:none;animation:hxGlow 14s ease-in-out infinite alternate}
+@keyframes hxGlow{to{transform:rotate(40deg) scale(1.08)}}
+
+/* الهلال */
+.arc{position:relative;z-index:1;height:var(--arc-h);overflow:hidden;direction:ltr;perspective-origin:50% 50%;
+  touch-action:pan-y;-webkit-user-select:none;user-select:none}
+.arc__ring{position:absolute;inset:0;transform-style:preserve-3d}
+.arc__card{position:absolute;top:50%;left:50%;width:var(--arc-w);aspect-ratio:1 / var(--arc-ratio);border-radius:calc(var(--radius) * .45);overflow:hidden;
+  background:rgba(22,20,18,.06);transform:translate3d(-50%,-50%,0);backface-visibility:hidden;will-change:transform}
+.arc__card img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.arc__card:hover img{transform:scale(1.06)}
+.arc__card:focus-visible{outline:3px solid var(--c-ink);outline-offset:4px}
+.arc:not(.is-ready) .arc__card{opacity:0}
+.arc.is-ready .arc__card{transition:opacity .8s ease}
+
+@media (max-width:699px){
+  :root{--arc-w:clamp(110px,36vw,170px)}
+}

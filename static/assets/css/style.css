@@ -19,16 +19,16 @@
 /* ---------- 2. المتغيرات (غيّر الألوان والمقاسات من هنا) ---------- */
 :root{
   /* الألوان */
-  --c-bg:#f5f0e8;          /* خلفية الموقع */
-  --c-ink:#161412;         /* النص */
-  --c-primary:#26235c;     /* اللون الأساسي: القسم الملون، الفوتر، الأزرار */
-  --c-accent:#d4f36b;      /* لون التمييز: زر القائمة، الدوائر، الروابط على الخلفية الغامقة */
+  --c-bg:#f3efe8;          /* خلفية الموقع */
+  --c-ink:#1d1b18;         /* النص */
+  --c-primary:#2e2a25;     /* اللون الأساسي: القسم الملون، الفوتر، الأزرار */
+  --c-accent:#d8c3a0;      /* لون التمييز: زر القائمة، الدوائر، الروابط على الخلفية الغامقة */
   --c-coral:#ff7a59;
   --c-lilac:#c6b6ff;
   --c-teal:#0f4d4a;
   --c-apricot:#ffc46b;
-  --c-white:#ffffff;
-  --c-muted:#a39c90;       /* لون النص قبل كشفه بالسكرول */
+  --c-teal:#5d6b57;
+  --c-muted:#b0a89b;       /* لون النص قبل كشفه بالسكرول */
   --c-line:rgba(22,20,18,.16);
 
   --c-text:var(--c-ink);
@@ -461,3 +461,18 @@ ul{margin:0;padding:0;list-style:none}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+/* =====================================================================
+   18. من أنا في الرئيسية: تصميم نصي بدون صورة
+   ===================================================================== */
+.ab{display:flex;flex-direction:column;align-items:center;max-width:980px;margin-inline:auto;text-align:center}
+.ab__title{margin:clamp(14px,1.6vw,24px) 0 0}
+.ab__line{display:block;width:clamp(48px,6vw,96px);height:1px;margin:clamp(24px,3vw,48px) 0;background:currentColor;opacity:.35}
+.ab__text{margin:0;max-width:44ch;font-size:var(--fs-big);line-height:1.6;opacity:.85}
+.ab__tools{display:flex;flex-direction:column;align-items:center;gap:1rem;margin-top:clamp(28px,3vw,52px);font-size:var(--fs-small)}
+.ab__tools>span{letter-spacing:var(--ls-caps);text-transform:uppercase;opacity:.6}
+.ab__tools ul{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(18px,3vw,48px);margin:0;padding:0;list-style:none}
+.ab__tools li{display:flex;flex-direction:column;align-items:center;gap:.7rem;direction:ltr}
+/* اللوقو يأخذ لون النص تلقائياً (بلون واحد هادئ) */
+.ab__ico{display:block;width:clamp(40px,3.6vw,56px);aspect-ratio:1;background:currentColor;
+  -webkit-mask:var(--ico) center/contain no-repeat;mask:var(--ico) center/contain no-repeat}
+.ab .btn{margin-top:clamp(32px,3.4vw,60px)}

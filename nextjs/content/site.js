@@ -72,32 +72,32 @@ const SITE = {
   /* ---------- الصفحة الرئيسية ---------- */
   home: {
     heroImages: ["assets/img/hero-1.svg", "assets/img/hero-2.svg"],
+    heroText: { ar: "مصممة جرافيك وهويات بصرية، أحوّل الأفكار إلى تصاميم هادئة ومدروسة بعناية في كل تفصيل.", en: "Graphic and brand designer turning ideas into calm, considered work, crafted down to every detail." },
     tagline: { ar: "تصميم جرافيك لأصحاب الأفكار الواضحة", en: "Graphic design for founders with a clear vision" },
-    intro: {
-      ar: "أؤمن أن وراء كل تصميم جيد فكرة واضحة، وأن التفاصيل هي ما يمنحها حضور. أنا مصممة جرافيك أستمتع بتطوير الأفكار وتحويلها إلى حلول بصرية متكاملة. أحرص أن يكون لكل مشروع أسلوبه وشخصيته الخاصة، وأولي التفاصيل عناية كبيرة للوصول إلى نتيجة متناسقه ومدروسة.",
-      en: "I believe that behind every great design lies a clear idea, and it is the details that give it presence. As a graphic designer, I enjoy developing concepts and turning them into cohesive visual solutions. I strive to ensure every project has its own unique style and personality, paying close attention to detail to achieve a harmonious and well crafted result."
-    },
+    
     casesEyebrow: { ar: "الأعمال", en: "Work" },
     casesTitle: { ar: "نتائج لعلامات تعرف من هي", en: "Results for brands that know who they are" },
     stickyTitle1: { ar: "من الفكرة", en: "From idea" },
     stickyTitle2: { ar: "إلى التنفيذ", en: "to execution" },
-    stickyImages: ["assets/img/process-1.svg", "assets/img/process-2.svg", "assets/img/process-3.svg"],
+    stickyImages: ["assets/img/work/crumeli/idea-1.jpg", "assets/img/work/crumeli/idea-2.jpg", "assets/img/work/crumeli/execution.jpg"],
     servicesEyebrow: { ar: "الخدمات", en: "Services" },
     servicesTitle: { ar: "كل ما تحتاجه علامتك، من مكان واحد", en: "Everything your brand needs, in one place" },
     aboutEyebrow: { ar: "من أنا", en: "About" },
     aboutTitle: { ar: "مصممة تهتم بالتفاصيل", en: "A designer who sweats the details" },
     aboutText: {
-      ar: "أنا أنوار، تعلّمت المهنة في وكالات تصميم كبيرة وعملت مع علامات معروفة في المنطقة. اليوم أعمل من استوديو صغير في الرياض، بنفس المعايير، لكل علامة تؤمن أن التصميم أكثر من مجرد شعار.",
-      en: "I'm Sara. I learned the craft in large design agencies, working with well-known brands across the region. Today I work from a small studio in Riyadh with the same standards, for every brand that believes design is more than a logo."
+      ar: "أنا أنوار، مصممة جرافيك متخصصة في الهويات البصرية. أبدأ كل مشروع بفهم العلامة وجمهورها، ثم أحوّل الفكرة إلى تصميم واضح ومتناسق في كل تفاصيله.",
+      en: "I'm Anwar, a graphic designer specialising in visual identities. I start every project by understanding the brand and its audience, then turn the idea into a clear, consistent design down to the last detail."
     },
     aboutImage: "assets/img/studio.svg",
-    aboutCta: { ar: "اقرأ قصتي", en: "Read my story" },
-    approachEyebrow: { ar: "طريقة العمل", en: "Approach" },
-    approachTitle: { ar: "أعمل معك، لا لأجلك فقط", en: "I work with you, not just for you" },
-    approachText: {
-      ar: "أقدّم لك مقترحاً مدروساً وآخذك معي في طريقة تفكيري. لا ألوان عشوائية هنا وخطوط هناك؛ المهم أن يكون الكل متماسكاً.",
-      en: "I build a considered proposal and take you through my thinking. No random colour here and a line there; the whole has to hold together."
-    },
+    // الأدوات اللي تظهر في قسم "من أنا" (احذف أو أضف براحتك)
+    toolsLabel: { ar: "أدواتي", en: "My tools" },
+    // كل أداة: الاسم + مسار اللوقو (ملفات SVG في public/assets/img/tools)
+    tools: [
+      { name: "Illustrator", icon: "assets/img/tools/illustrator.svg" },
+      { name: "Photoshop", icon: "assets/img/tools/photoshop.svg" },
+      { name: "InDesign", icon: "assets/img/tools/indesign.svg" },
+      { name: "Canva", icon: "assets/img/tools/canva.svg" }
+    ],
     approachImages: ["assets/img/desk-1.svg", "assets/img/desk-2.svg"],
     approachCta: { ar: "اكتشف طريقة عملي", en: "Discover my approach" },
     testimonialsTitle: { ar: "أستطيع أن أحكي كل شيء بنفسي، لكن عملائي يحكونه أفضل", en: "I could tell you all of this myself, but my clients say it better" },
@@ -112,7 +112,7 @@ const SITE = {
   // icon: circle | square | arch | triangle | wave
     services: [
     {
-      slug: "identity", icon: "square", bg: "#ff7a59", fg: "#161412",
+      slug: "identity", icon: "square", bg: "#d9cfc1", fg: "#1d1b18",
       title: { ar: "هوية بصرية", en: "Visual identity" },
       text: {
         ar: "يتعرف الناس على علامتك قبل أن يقرؤوا كلمة واحدة: من لون، أو شكل، أو خط. الهوية ليست زينة تضاف لاحقاً، بل هي طريقة وقوف علامتك في العالم.",
@@ -121,7 +121,7 @@ const SITE = {
       tags: [{ ar: "الشعار", en: "Logo" }, { ar: "النظام البصري", en: "Visual system" }, { ar: "دليل الهوية", en: "Brand guidelines" }]
     },
     {
-      slug: "social", icon: "wave", bg: "#d4f36b", fg: "#161412",
+      slug: "social", icon: "wave", bg: "#c9cbbb", fg: "#1d1b18",
       title: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social media posts" },
       text: {
         ar: "منشورات وقوالب تحافظ على هوية علامتك في كل منصة، وتلفت الانتباه من أول نظرة.",
@@ -130,13 +130,13 @@ const SITE = {
       tags: [{ ar: "منشورات", en: "Posts" }, { ar: "قصص", en: "Stories" }, { ar: "قوالب", en: "Templates" }]
     },
     {
-      slug: "presentations", icon: "arch", bg: "#c6b6ff", fg: "#161412",
+      slug: "presentations", icon: "arch", bg: "#d6c3b2", fg: "#1d1b18",
       title: { ar: "عروض تقديمية", en: "Presentations" },
       text: { ar: "عروض واضحة ومقنعة تحكي قصتك.", en: "Clear, persuasive decks that tell your story." },
       tags: [{ ar: "عروض المستثمرين", en: "Pitch decks" }, { ar: "عروض الشركات", en: "Company profiles" }]
     },
     {
-      slug: "marketing", icon: "triangle", bg: "#ffc46b", fg: "#161412",
+      slug: "marketing", icon: "triangle", bg: "#e4d8c3", fg: "#1d1b18",
       title: { ar: "تطبيقات التسويق والعلامات التجارية", en: "Marketing & brand applications" },
       text: { ar: "تطبيق الهوية على كل ما يحتاجه التسويق.", en: "Applying your brand to everything marketing needs." },
       tags: [{ ar: "إعلانات", en: "Ads" }, { ar: "مطبوعات", en: "Print" }]
@@ -461,16 +461,11 @@ const SITE = {
   about: {
     eyebrow: { ar: "من أنا", en: "About" },
     title: { ar: "أهلاً، أنا أنوار", en: "Hi, I'm Sara" },
-    intro: { ar: "مصممة جرافيك متخصصة في الهويات البصرية، أؤمن أن التصميم الجيد يبدأ بالإصغاء.", en: "A graphic designer specialising in brand identity. I believe good design starts with listening." },
+    intro: { ar: "مصممة جرافيك متخصصة في الهويات البصرية،أؤمن أن وراء كل تصميم جيد فكرة واضحة، وأن التفاصيل هي ما يمنحها حضور. أنا مصممة جرافيك أستمتع بتطوير الأفكار وتحويلها إلى حلول بصرية متكاملة. أحرص أن يكون لكل مشروع أسلوبه وشخصيته الخاصة، وأولي التفاصيل عناية كبيرة للوصول إلى نتيجة متناسقه ومدروسة.", en: "A graphic designer specialising in brand identity. I believe that behind every great design lies a clear idea, and it I believe that behind every great design lies a clear idea, and it is the details that give it presence. As a graphic designer, I is the details that give it presence. As a graphic designer, I enjoy developing concepts and turning them into cohesive enjoy developing concepts and turning them into cohesive  visual solutions. I strive to ensure every project has its own visual solutions. I strive to ensure every project has its own unique style and personality, paying close attention to detail to unique style and personality, paying close attention to detail to achieve a harmonious and well crafted result." },
     portrait: "assets/img/portrait.svg",
-    story: {
-      ar: "بدأت رحلتي في وكالات تصميم كبيرة، حيث تعلمت أن كل قرار تصميمي يجب أن يكون له سبب. بعد سنوات من العمل مع علامات كبيرة، أسست الاستوديو الخاص بي لأعمل عن قرب مع أصحاب المشاريع الذين يريدون علامة صادقة تشبههم.",
-      en: "My journey began in large design agencies, where I learned that every design decision needs a reason. After years of working with big brands, I set up my own studio to work closely with founders who want an honest brand that feels like them."
-    },
+    
     paragraphs: [
-      { ar: "أعمل مع عدد محدود من العملاء في الوقت نفسه، حتى يحصل كل مشروع على الاهتمام الذي يستحقه. لا أسلّم عملاً نصف منتهٍ؛ كل تفصيلة مهمة.", en: "I work with a limited number of clients at a time, so every project gets the attention it deserves. No half-finished work: every detail counts." },
-      { ar: "خارج الاستوديو تجدني أجمع الكتب القديمة، وأصوّر الخطوط في الشوارع، وأبحث عن أفضل فنجان قهوة في المدينة.", en: "Outside the studio you'll find me collecting old books, photographing street lettering and hunting for the best cup of coffee in town." }
-    ],
+        ],
     stats: [
       { value: 8, suffix: "+", label: { ar: "سنوات خبرة", en: "Years of experience" } },
       { value: 60, suffix: "+", label: { ar: "مشروع منجز", en: "Projects delivered" } },
@@ -480,10 +475,10 @@ const SITE = {
     stepsEyebrow: { ar: "طريقة العمل", en: "Approach" },
     stepsTitle: { ar: "أربع مراحل واضحة", en: "Four clear steps" },
     steps: [
-      { bg: "#d4f36b", fg: "#161412", title: { ar: "١. الاكتشاف", en: "1. Discover" }, text: { ar: "نجلس معاً لنفهم علامتك وجمهورك ومنافسيك، ونحدد الهدف بوضوح.", en: "We sit down to understand your brand, audience and competitors, and define the goal clearly." } },
-      { bg: "#c6b6ff", fg: "#161412", title: { ar: "٢. الفكرة", en: "2. Define" }, text: { ar: "أحول ما تعلمناه إلى استراتيجية واتجاه بصري واضح نتفق عليه قبل التصميم.", en: "I turn what we learned into a strategy and a clear visual direction we agree on before designing." } },
-      { bg: "#ff7a59", fg: "#161412", title: { ar: "٣. التصميم", en: "3. Design" }, text: { ar: "أصمم المقترح وأشرح لك كل قرار، ثم نطوره معاً حتى يكتمل.", en: "I design the proposal and walk you through every decision, then we refine it together." } },
-      { bg: "#ffc46b", fg: "#161412", title: { ar: "٤. التسليم", en: "4. Deliver" }, text: { ar: "تستلم كل الملفات ودليل استخدام واضح، وأبقى معك بعد الإطلاق.", en: "You get every file and clear guidelines, and I stay with you after launch." } }
+      { bg: "#c9cbbb", fg: "#1d1b18", title: { ar: "١. الاكتشاف", en: "1. Discover" }, text: { ar: "نجلس معاً لنفهم علامتك وجمهورك ومنافسيك، ونحدد الهدف بوضوح.", en: "We sit down to understand your brand, audience and competitors, and define the goal clearly." } },
+      { bg: "#d6c3b2", fg: "#1d1b18", title: { ar: "٢. الفكرة", en: "2. Define" }, text: { ar: "أحول ما تعلمناه إلى استراتيجية واتجاه بصري واضح نتفق عليه قبل التصميم.", en: "I turn what we learned into a strategy and a clear visual direction we agree on before designing." } },
+      { bg: "#d9cfc1", fg: "#1d1b18", title: { ar: "٣. التصميم", en: "3. Design" }, text: { ar: "أصمم المقترح وأشرح لك كل قرار، ثم نطوره معاً حتى يكتمل.", en: "I design the proposal and walk you through every decision, then we refine it together." } },
+      { bg: "#e4d8c3", fg: "#1d1b18", title: { ar: "٤. التسليم", en: "4. Deliver" }, text: { ar: "تستلم كل الملفات ودليل استخدام واضح، وأبقى معك بعد الإطلاق.", en: "You get every file and clear guidelines, and I stay with you after launch." } }
     ]
   },
 

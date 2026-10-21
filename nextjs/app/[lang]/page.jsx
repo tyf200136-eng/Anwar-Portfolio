@@ -1,6 +1,7 @@
 // الصفحة الرئيسية
 import SITE from "@/content/site";
-import { tr, pagePath } from "@/lib/i18n";
+import { tr, pagePath, casePath, src } from "@/lib/i18n";
+import HeroArc from "@/components/HeroArc";
 import { Media, Btn, Ring, IconDown, IconArrow, IconBack, IconQuote, SectionHead, CaseCard, ServiceCard, Marquee, Cta } from "@/components/ui";
 
 export default async function Home({ params }) {
@@ -11,39 +12,21 @@ export default async function Home({ params }) {
 
   return (
     <>
-      {/* الهيرو */}
-      <section className="hero" data-hero="">
-        <div className="wrap">
-          <div className="hero__c">
-            <h1 className="visually-hidden">{t(b.name)} — {t(b.role)}</h1>
-            <div className="hero__word hero__word--top" aria-hidden="true"><span>{t(b.wordTop)}</span></div>
-            <div className="hero__word hero__word--btm" aria-hidden="true"><span>{t(b.wordBottom)}</span></div>
-            <Media className="hero__m1" path={h.heroImages[0]} data-parallax="-0.08" />
-            <Media className="hero__m2" path={h.heroImages[1]} data-parallax="-0.16" />
-            <div className="hero__foot">
-              <a className="badge" href="#intro" aria-label={t(SITE.ui.scroll)}>
-                <Ring id="ring-badge" text={t(SITE.ui.scroll)} className="badge__ring" r={80} />
-                <span className="badge__dot"><IconDown /></span>
-              </a>
-              <p className="hero__tagline">{t(h.tagline)}</p>
-            </div>
-          </div>
+      {/* الهيرو: الاسم في النص + سطرين تعريف + شريط الأعمال المقوّس */}
+      <section className="hx">
+        <div className="hx__glow" aria-hidden="true" />
+        <div className="hx__text wrap" data-intro="">
+          <h1 className="hx__name">{t(b.name)}</h1>
+          <p className="hx__lead">{t(h.heroText)}</p>
         </div>
+        <HeroArc label={t(h.casesEyebrow)} items={featured.map((c) => ({
+          slug: c.slug, title: t(c.title), href: casePath(lang, c.slug), img: src(c.thumb || c.cover)
+        }))} />
       </section>
 
       {/* نص المقدمة */}
       <section className="section intro wrap" id="intro">
         <p className="big-text reveal" data-reveal="">{t(h.intro)}</p>
-        <div className="intro__cta"><Btn href={pagePath(lang, "contact")}>{t(SITE.ui.startProject)}</Btn></div>
-      </section>
-
-      {/* الأعمال */}
-      <section className="section wrap" id="work">
-        <SectionHead eyebrow={h.casesEyebrow} title={h.casesTitle} lang={lang} />
-        <div className="cases" data-cases="">
-          {featured.map((c, i) => <CaseCard key={c.slug} c={c} i={i} lang={lang} />)}
-        </div>
-        <div className="cases__more"><Btn href={pagePath(lang, "work")}>{t(SITE.ui.viewAllWork)}</Btn></div>
       </section>
 
       {/* الدائرة الملونة + العناوين اللاصقة + الخدمات + من أنا */}
@@ -64,14 +47,26 @@ export default async function Home({ params }) {
 
 
           <div className="section wrap">
-            <div className="tm">
-              <div className="tm__text">
-                <span className="eyebrow">{t(h.aboutEyebrow)}</span>
-                <h2>{t(h.aboutTitle)}</h2>
-                <p>{t(h.aboutText)}</p>
-                <Btn href={pagePath(lang, "about")} className="btn--light">{t(h.aboutCta)}</Btn>
-              </div>
-              <Media className="tm__media" path={h.aboutImage} data-clip="" />
+            {/* من أنا: تصميم نصي بدون صورة */}
+            <div className="ab">
+              <span className="eyebrow">{t(h.aboutEyebrow)}</span>
+              <h2 className="ab__title">{t(h.aboutTitle)}</h2>
+              <span className="ab__line" aria-hidden="true" />
+              <p className="ab__text">{t(h.aboutText)}</p>
+              {h.tools?.length > 0 && (
+                <div className="ab__tools">
+                  <span>{t(h.toolsLabel)}</span>
+                  <ul>
+                    {h.tools.map((x) => (
+                      <li key={x.name}>
+                        {x.icon && <span className="ab__ico" style={{ "--ico": `url(${src(x.icon)})` }} aria-hidden="true" />}
+                        {x.name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              <Btn href={pagePath(lang, "about")} className="btn--light">{t(h.aboutCta)}</Btn>
             </div>
           </div>
         </div>

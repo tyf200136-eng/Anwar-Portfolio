@@ -82,16 +82,18 @@ const SITE = {
     casesTitle: { ar: "نتائج لعلامات تعرف من هي", en: "Results for brands that know who they are" },
     stickyTitle1: { ar: "من الفكرة", en: "From idea" },
     stickyTitle2: { ar: "إلى التنفيذ", en: "to execution" },
-    stickyImages: ["assets/img/process-1.svg", "assets/img/process-2.svg", "assets/img/process-3.svg"],
+    stickyImages: ["assets/img/work/crumeli/idea-1.jpg", "assets/img/work/crumeli/idea-2.jpg", "assets/img/work/crumeli/execution.jpg"],
     servicesEyebrow: { ar: "الخدمات", en: "Services" },
     servicesTitle: { ar: "كل ما تحتاجه علامتك، من مكان واحد", en: "Everything your brand needs, in one place" },
     aboutEyebrow: { ar: "من أنا", en: "About" },
     aboutTitle: { ar: "مصممة تهتم بالتفاصيل", en: "A designer who sweats the details" },
     aboutText: {
-      ar: "أنا أنوار، تعلّمت المهنة في وكالات تصميم كبيرة وعملت مع علامات معروفة في المنطقة. اليوم أعمل من استوديو صغير في الرياض، بنفس المعايير، لكل علامة تؤمن أن التصميم أكثر من مجرد شعار.",
-      en: "I'm Sara. I learned the craft in large design agencies, working with well-known brands across the region. Today I work from a small studio in Riyadh with the same standards, for every brand that believes design is more than a logo."
-    },
+    ar: "أنا أنوار، مصممة جرافيك متخصصة في الهويات البصرية. أبدأ كل مشروع بفهم العلامة وجمهورها، ثم أحوّل الفكرة إلى تصميم واضح ومتناسق في كل تفاصيله.",
+    en: "I'm Anwar, a graphic designer specialising in visual identities. I start every project by understanding the brand and its audience, then turn the idea into a clear, consistent design down to the last detail."},
     aboutImage: "assets/img/studio.svg",
+        // الأدوات اللي تظهر في قسم "من أنا" (احذف أو أضف براحتك)
+    toolsLabel: { ar: "أدواتي", en: "My tools" },
+    tools: ["Illustrator", "Photoshop", "InDesign", "Canva"],
     aboutCta: { ar: "اقرأ قصتي", en: "Read my story" },
     approachEyebrow: { ar: "طريقة العمل", en: "Approach" },
     approachTitle: { ar: "أعمل معك، لا لأجلك فقط", en: "I work with you, not just for you" },
@@ -313,16 +315,13 @@ const SITE = {
   about: {
     eyebrow: { ar: "من أنا", en: "About" },
     title: { ar: "أهلاً، أنا أنوار", en: "Hi, I'm Sara" },
-    intro: { ar: "مصممة جرافيك متخصصة في الهويات البصرية، أؤمن أن التصميم الجيد يبدأ بالإصغاء.", en: "A graphic designer specialising in brand identity. I believe good design starts with listening." },
+    intro: { ar: "مصممة جرافيك متخصصة في الهويات البصرية،أؤمن أن وراء كل تصميم جيد فكرة واضحة، وأن التفاصيل هي ما يمنحها حضور. أنا مصممة جرافيك أستمتع بتطوير الأفكار وتحويلها إلى حلول بصرية متكاملة. أحرص أن يكون لكل مشروع أسلوبه وشخصيته الخاصة، وأولي التفاصيل عناية كبيرة للوصول إلى نتيجة متناسقه ومدروسة.", en: "A graphic designer specialising in brand identity. I believe that behind every great design lies a clear idea, and it I believe that behind every great design lies a clear idea, and it is the details that give it presence. As a graphic designer, I is the details that give it presence. As a graphic designer, I enjoy developing concepts and turning them into cohesive enjoy developing concepts and turning them into cohesive  visual solutions. I strive to ensure every project has its own visual solutions. I strive to ensure every project has its own unique style and personality, paying close attention to detail to unique style and personality, paying close attention to detail to achieve a harmonious and well crafted result." },
     portrait: "assets/img/portrait.svg",
     story: {
       ar: "بدأت رحلتي في وكالات تصميم كبيرة، حيث تعلمت أن كل قرار تصميمي يجب أن يكون له سبب. بعد سنوات من العمل مع علامات كبيرة، أسست الاستوديو الخاص بي لأعمل عن قرب مع أصحاب المشاريع الذين يريدون علامة صادقة تشبههم.",
       en: "My journey began in large design agencies, where I learned that every design decision needs a reason. After years of working with big brands, I set up my own studio to work closely with founders who want an honest brand that feels like them."
     },
-    paragraphs: [
-      { ar: "أعمل مع عدد محدود من العملاء في الوقت نفسه، حتى يحصل كل مشروع على الاهتمام الذي يستحقه. لا أسلّم عملاً نصف منتهٍ؛ كل تفصيلة مهمة.", en: "I work with a limited number of clients at a time, so every project gets the attention it deserves. No half-finished work: every detail counts." },
-      { ar: "خارج الاستوديو تجدني أجمع الكتب القديمة، وأصوّر الخطوط في الشوارع، وأبحث عن أفضل فنجان قهوة في المدينة.", en: "Outside the studio you'll find me collecting old books, photographing street lettering and hunting for the best cup of coffee in town." }
-    ],
+    
     stats: [
       { value: 8, suffix: "+", label: { ar: "سنوات خبرة", en: "Years of experience" } },
       { value: 60, suffix: "+", label: { ar: "مشروع منجز", en: "Projects delivered" } },
