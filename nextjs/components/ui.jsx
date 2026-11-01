@@ -143,7 +143,7 @@ export function Marquee({ lang }) {
     <div className="mq" data-marquee="" {...(reverse ? { "data-reverse": "" } : {})}>
       <div className="mq__track">
         <ul className="mq__group">
-          {list.map((c) => <li key={c.name} className="mq__item"><img src={src(c.logo)} alt={c.name} loading="lazy" /></li>)}
+          {list.map((c) => <li key={c.name} className="mq__item"><img src={src(c.logo)} alt={c.name} loading="eager" decoding="async" /></li>)}
         </ul>
       </div>
     </div>
