@@ -131,7 +131,7 @@ const SITE = {
       tags: [{ ar: "عروض المستثمرين", en: "Pitch decks" }, { ar: "عروض الشركات", en: "Company profiles" }]
     },
     {
-      slug: "marketing", icon: "triangle", bg: "#e4d8c3", fg: "#1d1b18",
+           slug: "marketing", icon: "triangle", bg: "#e4d8c3", fg: "#1d1b18", direct: true,
       title: { ar: "تطبيقات التسويق والعلامات التجارية", en: "Marketing & brand applications" },
       text: { ar: "تطبيق الهوية على كل ما يحتاجه التسويق.", en: "Applying your brand to everything marketing needs." },
       tags: [{ ar: "إعلانات", en: "Ads" }, { ar: "مطبوعات", en: "Print" }]
@@ -404,21 +404,6 @@ const SITE = {
 
   ],
 
-  /* ---------- آراء العملاء (تجريبية — استبدلها بآراء حقيقية) ---------- */
-  testimonials: [
-    { name: { ar: "اسم العميل", en: "Client name" }, company: { ar: "نخلة كوفي", en: "Nakhla Coffee" },
-      quote: { ar: "فهمت أنوار ما نريده من أول اجتماع. الهوية الجديدة تشبهنا تماماً، وعملاؤنا لاحظوا الفرق فوراً.", en: "Sara understood what we wanted from the very first meeting. The new identity feels exactly like us, and our customers noticed straight away." } },
-    { name: { ar: "اسم العميل", en: "Client name" }, company: { ar: "أكاديمية مسار", en: "Masar Academy" },
-      quote: { ar: "تخطيط واضح وتواصل ممتاز والتزام بالمواعيد. والنتيجة كانت أجمل مما تخيلنا.", en: "Clear planning, great communication and always on time. The result was more beautiful than we imagined." } },
-    { name: { ar: "اسم العميل", en: "Client name" }, company: { ar: "مهرجان السدو", en: "Sadu Festival" },
-      quote: { ar: "حوّلت فكرة معقدة إلى نظام بصري بسيط ومرن. استخدمناه في كل شيء من الملصقات إلى التذاكر.", en: "She turned a complex idea into a simple, flexible visual system. We used it on everything from posters to tickets." } },
-    { name: { ar: "اسم العميل", en: "Client name" }, company: { ar: "عيادات وافي", en: "Wafi Clinics" },
-      quote: { ar: "قادت المشروع بثقة دون أن تتجاهل رأينا. هذا أعطانا راحة كبيرة طوال العمل.", en: "She led the project with confidence without overruling our input. That gave us real peace of mind throughout." } },
-    { name: { ar: "اسم العميل", en: "Client name" }, company: { ar: "دار راوي", en: "Rawi Publishing" },
-      quote: { ar: "كل غلاف قطعة فنية، والسلسلة كلها متماسكة. القراء يتعرفون على كتبنا من بعيد.", en: "Every cover is a piece of art, and the whole series holds together. Readers spot our books from across the shop." } },
-    { name: { ar: "اسم العميل", en: "Client name" }, company: { ar: "ديون", en: "Dune" },
-      quote: { ar: "سريعة ومبدعة ودائماً مستعدة للتعديل. أنصح بها لأي علامة ناشئة.", en: "Fast, creative and always ready to adjust. I'd recommend her to any young brand." } }
-  ],
 
   /* ---------- شعارات العملاء (شريط متحرك) ---------- */
   clients: [
@@ -484,12 +469,7 @@ const SITE = {
     
     paragraphs: [
         ],
-    stats: [
-      { value: 8, suffix: "+", label: { ar: "سنوات خبرة", en: "Years of experience" } },
-      { value: 60, suffix: "+", label: { ar: "مشروع منجز", en: "Projects delivered" } },
-      { value: 40, suffix: "", label: { ar: "علامة تجارية", en: "Brands" } },
-      { value: 5, suffix: "", label: { ar: "دول", en: "Countries" } }
-    ],
+
     stepsEyebrow: { ar: "طريقة العمل", en: "Approach" },
     stepsTitle: { ar: "أربع مراحل واضحة", en: "Four clear steps" },
     steps: [

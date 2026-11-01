@@ -162,13 +162,11 @@ export function Cta({ lang }) {
   return (
     <section className="section wrap">
       <div className="cta">
-        <span className="cta__deco" aria-hidden="true" />
-        <Media className="cta__media" path={h.ctaImage} />
-        <div className="cta__text">
-          <h2>{tr(h.ctaTitle, lang)}</h2>
-          <p>{tr(h.ctaText, lang)}</p>
-          <Btn href={pagePath(lang, "contact")}>{tr(SITE.ui.letsTalk, lang)}</Btn>
-        </div>
+        <span className="cta__glow" aria-hidden="true" />
+        <h2 className="cta__title">{tr(h.ctaTitle, lang)}</h2>
+        <p className="cta__text">{tr(h.ctaText, lang)}</p>
+        <Btn href={pagePath(lang, "contact")}>{tr(SITE.ui.letsTalk, lang)}</Btn>
+        <a className="cta__mail" href={`mailto:${SITE.brand.email}`} dir="ltr">{SITE.brand.email}</a>
       </div>
     </section>
   );

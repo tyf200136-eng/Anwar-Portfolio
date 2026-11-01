@@ -20,6 +20,8 @@ export default async function Work({ params }) {
     title: t(sv.title),
     bg: sv.bg,
     fg: sv.fg,
+    // direct: true = المجلد يفتح السكرول مباشرة بكل التصاميم (بدون كروت)
+    direct: !!sv.direct,
     items: SITE.cases
       .filter((c) => c.services.includes(sv.slug))
       .map((c) => ({

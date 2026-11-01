@@ -334,7 +334,7 @@ ul{margin:0;padding:0;list-style:none}
 .swiper-slide-active .quote__mark{color:var(--c-accent)}
 
 /* شعارات العملاء */
-.mq{overflow:hidden;opacity:0;transition:opacity var(--speed)}
+.mq{overflow:hidden;direction:ltr;opacity:0;transition:opacity var(--speed)}
 .mq.is-ready,html:not(.js-motion) .mq{opacity:1}
 .mq+.mq{margin-top:clamp(16px,2vw,32px)}
 .mq__track{display:flex;width:max-content;gap:clamp(20px,5vw,110px);direction:ltr}
@@ -342,13 +342,7 @@ ul{margin:0;padding:0;list-style:none}
 .mq__item{width:clamp(120px,10vw,190px);aspect-ratio:5/4;display:grid;place-items:center;flex:none}
 .mq__item img{width:100%;height:100%;object-fit:contain;opacity:.88}
 
-/* ---------- 14. CTA + الفوتر ---------- */
-.cta{position:relative;overflow:hidden;display:grid;gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(20px,3vw,56px);border-radius:var(--radius-lg);background:var(--c-lilac);color:var(--c-ink);isolation:isolate}
-.cta__media{aspect-ratio:1;max-width:520px;width:100%}
-.cta__text h2{margin-bottom:clamp(14px,1.6vw,28px);max-width:16ch}
-.cta__text .btn{margin-top:clamp(20px,2.4vw,40px)}
-.cta__deco{position:absolute;z-index:-1;inset-inline-end:-10%;bottom:-40%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.55),rgba(255,255,255,0) 70%)}
-@media (min-width:900px){.cta{grid-template-columns:1fr 1.25fr}}
+
 
 .ftr{--c-text:var(--c-bg);--c-link-hover:var(--c-accent);background:var(--c-primary);color:var(--c-bg);margin-top:var(--space-m)}
 .ftr::before{content:"";display:block;height:clamp(40px,3vw,56px);background:var(--c-bg);border-end-start-radius:var(--radius-lg);border-end-end-radius:var(--radius-lg)}
@@ -610,3 +604,19 @@ ul{margin:0;padding:0;list-style:none}
 .ab .btn{margin-top:clamp(32px,3.4vw,60px)}
 /* المسافة بين الهلال وقسم "من الفكرة" */
 .hx + .gc{margin-top:clamp(24px,4vw,80px)}
+
+/* =====================================================================
+   19. قسم "جاهز تعطي علامتك مكانها" بتصميم هادئ يشبه الهيرو
+   ===================================================================== */
+.cta{position:relative;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding:clamp(56px,8vw,140px) clamp(20px,4vw,64px);border-radius:var(--radius-lg);background:#ebe4d8;color:var(--c-ink)}
+.cta__glow{position:absolute;z-index:-1;left:50%;top:50%;width:min(90%,760px);aspect-ratio:1;translate:-50% -50%;border-radius:50%;
+  background:radial-gradient(closest-side at 38% 40%,var(--hx-glow-1,#e8d9bf),transparent),radial-gradient(closest-side at 64% 42%,var(--hx-glow-2,#d6dccb),transparent),radial-gradient(closest-side at 50% 66%,var(--hx-glow-3,#ead2c4),transparent);
+  filter:blur(40px);pointer-events:none}
+.cta__title{margin:0;max-width:18ch}
+.cta__text{margin:clamp(14px,1.6vw,28px) 0 0;max-width:40ch;font-size:var(--fs-big);line-height:1.55;opacity:.8}
+.cta .btn{margin-top:clamp(28px,3vw,52px)}
+.cta__mail{margin-top:clamp(16px,1.6vw,24px);font-size:var(--fs-small);opacity:.6;text-underline-offset:.3em}
+.cta__mail:hover{opacity:1}
+/* المجلد المباشر: نخفي البطاقات لأن السكرول يفتح على طول */
+.deck--direct .deck__track,.deck--direct>.deck__hint{visibility:hidden}

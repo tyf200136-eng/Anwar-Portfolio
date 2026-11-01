@@ -27,6 +27,10 @@ const Flower = () => (
   </svg>
 );
 
+// كل تصاميم مشاريع المجلد في سكرول واحد (بدون أسماء)
+const directGallery = (f) => ({ slug: f.slug, title: f.title, gallery: f.items.flatMap((x) => x.gallery), display: "cards" });
+const itemAt = (f, i) => (f.direct ? directGallery(f) : f.items[i]);
+
 export default function Folders({ folders, labels }) {
   const [open, setOpen] = useState(-1);   // رقم المجلد المفتوح (-1 = مغلق)
   const [gal, setGal] = useState(-1);     // رقم العميل اللي تصاميمه مفتوحة (-1 = مغلق)
@@ -49,13 +53,23 @@ export default function Folders({ folders, labels }) {
   galOpen.current = gal >= 0;
   const f = folders[lastOpen.current] || folders[0];
   const items = f ? f.items : [];
-  const g = items[lastGal.current];
+  // مجلد مباشر (direct: true في site.js): يفتح السكرول على طول، وفيه تصاميم كل المشاريع ورا بعض
+  const direct = !!f?.direct;
+  const g = direct ? directGallery(f) : items[lastGal.current];
+
+  // فتح مجلد (والمجلد المباشر يفتح السكرول مباشرة)
+  const openFolder = (i) => {
+    setOpen(i);
+    if (folders[i].direct && folders[i].items.length) setGal(0);
+  };
+  // زر الرجوع من السكرول: في المجلد المباشر يقفل المجلد كامل
+  const closeGal = () => (direct ? setOpen(-1) : setGal(-1));
 
   // فتح مجلد من الرابط: /work?filter=identity (روابط الفوتر تستخدم هذا)
   useEffect(() => {
     const slug = new URLSearchParams(window.location.search).get("filter");
     const i = folders.findIndex((x) => x.slug === slug);
-    if (i > -1) setOpen(i);
+    if (i > -1) openFolder(i);
   }, [folders]);
 
   // عند فتح المجلد: قفل سكرول الصفحة + زر Escape
@@ -68,7 +82,7 @@ export default function Folders({ folders, labels }) {
     deck.focus({ preventScroll: true });
     const onKey = (e) => {
       if (e.key !== "Escape") return;
-      if (galOpen.current) setGal(-1); else setOpen(-1);
+      if (galOpen.current && !folders[open].direct) setGal(-1); else setOpen(-1);
     };
     window.addEventListener("keydown", onKey);
     return () => { html.classList.remove("deck-open"); window.removeEventListener("keydown", onKey); setGal(-1); };
@@ -82,9 +96,10 @@ export default function Folders({ folders, labels }) {
   // حركة تصاميم العميل: التصميم الحالي كبير في النص، واللي قبله وبعده يطلّون كشرائح من فوق وتحت
   useEffect(() => {
     if (gal < 0 || open < 0) return;
-    if (folders[open].items[gal].display === "long") return; // العرض الطويل ما يحتاج حركة
+    const it = itemAt(folders[open], gal);
+    if (!it || it.display === "long") return; // العرض الطويل ما يحتاج حركة
     const el = galRef.current;
-    const n = folders[open].items[gal].gallery.length;
+    const n = it.gallery.length;
     const imgs = galItemsRef.current.slice(0, n);
     let cur = 0, raf;
     const tick = () => {
@@ -189,7 +204,7 @@ export default function Folders({ folders, labels }) {
       {/* المجلدات */}
       <div className="folders">
         {folders.map((x, i) => (
-          <button key={x.slug} type="button" className="folder" aria-haspopup="dialog" onClick={() => setOpen(i)}
+          <button key={x.slug} type="button" className="folder" aria-haspopup="dialog" onClick={() => openFolder(i)}
             style={{ "--bg": x.bg, "--fg": x.fg, "--tab": TAB_OFFSETS[i % TAB_OFFSETS.length] }}>
             <span className="folder__tab">( {x.title} )</span>
             <span className="folder__body">
@@ -205,7 +220,7 @@ export default function Folders({ folders, labels }) {
       </div>
 
       {/* المجلد المفتوح */}
-      <div ref={deckRef} className={`deck${open >= 0 ? " is-open" : ""}${gal >= 0 ? " has-gal" : ""}`} tabIndex={-1} role="dialog" aria-modal="true"
+      <div ref={deckRef} className={`deck${open >= 0 ? " is-open" : ""}${gal >= 0 ? " has-gal" : ""}${direct ? " deck--direct" : ""}`} tabIndex={-1} role="dialog" aria-modal="true"
         aria-label={f?.title} inert={open < 0} style={{ "--bg": f?.bg, "--fg": f?.fg, "--n": Math.max(items.length, 1) }}>
         <div className="deck__bar">
           <button type="button" className="icon-btn deck__back" onClick={() => setOpen(-1)} aria-label={labels.back}><BackIcon /></button>
@@ -252,9 +267,9 @@ export default function Folders({ folders, labels }) {
         <div ref={galRef} className={`gal${gal >= 0 ? " is-open" : ""}${g?.display === "long" ? " gal--long" : ""}`} tabIndex={-1} inert={gal < 0} role="dialog" aria-modal="true" aria-label={g?.title}
           style={{ "--n": Math.max(g ? g.gallery.length : 1, 1) }}>
           <div className="gal__bar">
-            <button type="button" className="icon-btn deck__back" onClick={() => setGal(-1)} aria-label={labels.back}><BackIcon /></button>
+            <button type="button" className="icon-btn deck__back" onClick={closeGal} aria-label={labels.back}><BackIcon /></button>
             <div className="deck__title"><span>{g?.title}</span>{g?.display !== "long" && <span ref={galCounterRef} className="deck__count" />}</div>
-            {g && <Link className="link-arrow gal__full" href={g.href}>{labels.fullProject}<DiagIcon /></Link>}
+            {g && !direct && <Link className="link-arrow gal__full" href={g.href}>{labels.fullProject}<DiagIcon /></Link>}
           </div>
           {g?.display === "long" ? (
             // عرض طويل متصل (للهويات): الصفحات تحت بعض بدون فراغات

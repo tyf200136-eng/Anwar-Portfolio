@@ -32,16 +32,7 @@ export default async function About({ params }) {
         </div>
       </section>
 
-      <section className="section wrap">
-        <div className="stats">
-          {a.stats.map((x, i) => (
-            <div className="stat" key={i}>
-              <span className="stat__v" data-count={x.value} data-suffix={x.suffix || ""}>{x.value}{x.suffix || ""}</span>
-              <span className="stat__l">{t(x.label)}</span>
-            </div>
-          ))}
-        </div>
-      </section>
+
 
       <section className="section wrap">
         <SectionHead eyebrow={a.stepsEyebrow} title={a.stepsTitle} lang={lang} />
