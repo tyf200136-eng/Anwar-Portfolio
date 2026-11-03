@@ -23,7 +23,7 @@ const SITE = {
   
     // رابط استقبال رسائل نموذج التواصل (مثلاً من formspree.io).
     // اتركه فارغاً ليفتح النموذج برنامج البريد مباشرة.
-    formEndpoint: "",
+    formEndpoint: "/api/contact",
     socials: [
      
     ],
@@ -45,7 +45,7 @@ const SITE = {
     more: { ar: "اعرف أكثر", en: "Learn more" },
     menu: { ar: "القائمة", en: "Menu" },
     close: { ar: "إغلاق", en: "Close" },
-    viewCase: { ar: "عرض المشروع • عرض المشروع • ", en: "VIEW CASE • VIEW CASE • VIEW CASE • " },
+    viewCase: { ar: "VIEW PROJECT • VIEW PROJECT • ", en: "VIEW PROJECT • VIEW PROJECT • " },
     scroll: { ar: "مرّر للأسفل • مرّر للأسفل • ", en: "SCROLL DOWN • SCROLL DOWN • " },
     all: { ar: "الكل", en: "All" },
     client: { ar: "العميل", en: "Client" },

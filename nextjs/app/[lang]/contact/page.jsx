@@ -25,6 +25,8 @@ export default async function Contact({ params }) {
         <form className="form" data-contact-form="" noValidate
           data-endpoint={b.formEndpoint || ""} data-email={b.email} data-subject={t(c.title)}
           data-msg-sending={t(f.sending)} data-msg-success={t(f.success)} data-msg-error={t(f.error)}>
+          {/* فخ للروبوتات: مخفي عن الزوار */}
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px" }} />
           <div className="field"><label htmlFor="f-name">{t(f.name)}</label><input id="f-name" name="name" autoComplete="name" required /></div>
           <div className="field"><label htmlFor="f-email">{t(f.email)}</label><input id="f-email" name="email" type="email" autoComplete="email" required dir="auto" /></div>
           <div className="field">
