@@ -39,6 +39,7 @@ export default async function Work({ params }) {
 
   const labels = {
     projects: t(w.projects),
+    designs: t(w.designs),
     coverTab: t(w.coverTab),
     hint: t(w.folderHint),
     scrollHint: t(w.scrollHint),

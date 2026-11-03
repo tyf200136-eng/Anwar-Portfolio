@@ -16,7 +16,8 @@ export default async function Home({ params }) {
       <section className="hx">
         <div className="hx__glow" aria-hidden="true" />
         <div className="hx__text wrap" data-intro="">
-          <h1 className="hx__name">{t(b.name)}</h1>
+          {/* لوقو المصممة (الاسم مكتوب للقارئ الآلي ومحركات البحث) */}
+          <h1 className="hx__logo"><img src={src(b.logo)} alt={t(b.name)} /></h1>
           <p className="hx__lead">{t(h.heroText)}</p>
         </div>
         <HeroArc label={t(h.casesEyebrow)} items={featured.map((c) => ({

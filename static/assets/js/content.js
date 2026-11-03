@@ -18,7 +18,7 @@ const SITE = {
     role: { ar: "مصممة جرافيك وهويات بصرية", en: "Graphic & brand designer" },
     email: "hello@example.com",
     phone: "+966 50 000 0000",
-    city: { ar: "الرياض، السعودية", en: "Riyadh, Saudi Arabia" },
+    city: { ar: "السعودية", en: "Saudi Arabia" },
     // رابط استقبال رسائل نموذج التواصل (مثلاً من formspree.io).
     // اتركه فارغاً ليفتح النموذج برنامج البريد مباشرة.
     formEndpoint: "",

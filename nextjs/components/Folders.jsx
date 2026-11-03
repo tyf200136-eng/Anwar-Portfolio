@@ -208,7 +208,7 @@ export default function Folders({ folders, labels }) {
             style={{ "--bg": x.bg, "--fg": x.fg, "--tab": TAB_OFFSETS[i % TAB_OFFSETS.length] }}>
             <span className="folder__tab">( {x.title} )</span>
             <span className="folder__body">
-              <span className="folder__count"><strong>{x.items.length}</strong> {labels.projects}</span>
+              <span className="folder__count"><strong>{x.direct ? x.items.reduce((n, c) => n + c.gallery.length, 0) : x.items.length}</strong> {x.direct ? labels.designs : labels.projects}</span>
               <DiagIcon />
             </span>
           </button>

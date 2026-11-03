@@ -620,3 +620,24 @@ ul{margin:0;padding:0;list-style:none}
 .cta__mail:hover{opacity:1}
 /* المجلد المباشر: نخفي البطاقات لأن السكرول يفتح على طول */
 .deck--direct .deck__track,.deck--direct>.deck__hint{visibility:hidden}
+
+/* =====================================================================
+   20. صفحة من أنا: هيرو نصي بدون صورة
+   ===================================================================== */
+.me{display:flex;flex-direction:column;align-items:center;max-width:1000px;margin-inline:auto;text-align:center}
+.me__title{margin:clamp(14px,1.6vw,24px) 0 0;max-width:none}
+.page-hero .me__lead{margin:clamp(14px,1.6vw,26px) 0 0;max-width:24ch;font-size:var(--fs-h3);line-height:1.35;color:var(--c-primary)}
+.me__line{display:block;width:clamp(48px,6vw,96px);height:1px;margin:clamp(28px,3vw,52px) 0;background:currentColor;opacity:.3}
+.page-hero .me__text{margin:0;max-width:46ch;font-size:var(--fs-body);line-height:1.8;opacity:.8}
+.me__tools .ab__ico{width:clamp(34px,3vw,46px)}
+.me__tools li{color:var(--c-ink)}
+
+/* =====================================================================
+   21. لوقو المصممة في الهيرو
+   ===================================================================== */
+.hx__logo{margin:0;line-height:0}
+.hx__logo img{display:block;width:auto;height:clamp(240px,46svh,520px);
+  animation:hxWrite 1.8s cubic-bezier(.6,0,.2,1) .2s both}
+/* اللوقو ينكتب من فوق لتحت عند فتح الصفحة */
+@keyframes hxWrite{from{clip-path:inset(0 0 100% 0);opacity:.2}to{clip-path:inset(0 0 0 0);opacity:1}}
+@media (prefers-reduced-motion:reduce){.hx__logo img{animation:none}}

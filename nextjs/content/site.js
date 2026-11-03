@@ -11,22 +11,21 @@
 const SITE = {
   /* ---------- معلومات المصمم ---------- */
   brand: {
-    name: { ar: "أنوار سيراج", en: "Anwar Siraj" },
+    name: { ar: "أنوار سراج", en: "Anwar Siraj" },
+        // لوقو المصممة (يظهر في الهيرو)
+    logo: "assets/img/anwar-logo.svg",
     // الكلمتان الكبيرتان في أعلى الصفحة الرئيسية
     wordTop: { ar: "أنوار", en: "Sara" },
-    wordBottom: { ar: "سيراج", en: "Nasser" },
+    wordBottom: { ar: "سراج", en: "Nasser" },
     role: { ar: "مصممة جرافيك وهويات بصرية", en: "Graphic & brand designer" },
     email: "hello@example.com",
     phone: "+966 50 000 0000",
-    city: { ar: "الرياض، السعودية", en: "Riyadh, Saudi Arabia" },
+  
     // رابط استقبال رسائل نموذج التواصل (مثلاً من formspree.io).
     // اتركه فارغاً ليفتح النموذج برنامج البريد مباشرة.
     formEndpoint: "",
     socials: [
-      { label: "Instagram", url: "https://instagram.com/" },
-      { label: "Behance", url: "https://behance.net/" },
-      { label: "LinkedIn", url: "https://linkedin.com/" },
-      { label: "Dribbble", url: "https://dribbble.com/" }
+     
     ],
 
   },
@@ -52,8 +51,6 @@ const SITE = {
     client: { ar: "العميل", en: "Client" },
     year: { ar: "السنة", en: "Year" },
     services: { ar: "الخدمات", en: "Services" },
-    challenge: { ar: "التحدي", en: "The challenge" },
-    solution: { ar: "الحل", en: "The solution" },
     nextProject: { ar: "المشروع التالي", en: "Next project" },
     backToWork: { ar: "كل الأعمال", en: "All work" },
     prev: { ar: "السابق", en: "Previous" },
@@ -74,7 +71,7 @@ const SITE = {
     casesTitle: { ar: "نتائج لعلامات تعرف من هي", en: "Results for brands that know who they are" },
     stickyTitle1: { ar: "من الفكرة", en: "From idea" },
     stickyTitle2: { ar: "إلى التنفيذ", en: "to execution" },
-    stickyImages: ["assets/img/work/crumeli/idea-1.jpg", "assets/img/work/crumeli/idea-2.jpg", "assets/img/work/crumeli/execution.jpg"],
+    stickyImages: ["assets/img/work/GLOW/gl1.png", "assets/img/work/coffee/cover.png", "assets/img/work/btack/cover2.png"],
     servicesEyebrow: { ar: "الخدمات", en: "Services" },
     servicesTitle: { ar: "كل ما تحتاجه علامتك، من مكان واحد", en: "Everything your brand needs, in one place" },
     aboutEyebrow: { ar: "من أنا", en: "About" },
@@ -148,8 +145,6 @@ const SITE = {
       services: ["identity"],
       cover: "assets/img/work/crumeli/cover5.jpg", video: "",
       summary: { ar: "هوية بصرية لعلامة كوكيز مصنوعة يدوياً، مستوحاة من فتات الكوكيز.", en: "A visual identity for a handmade cookie brand, inspired by cookie crumbs." },
-      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
-      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
       gallery: [
         { src: "assets/img/work/crumeli/cr1.jpg" },
         { src: "assets/img/work/crumeli/cr2.jpg" },
@@ -166,8 +161,6 @@ const SITE = {
       services: ["identity"],
       cover: "assets/img/work/luqma-laffa/cover6.jpg", video: "",
       summary: { ar: "هوية بصرية لمطعم برغر وشاورما، شعارها «النكهة تبدأ من هنا».", en: "A visual identity for a burger and shawarma restaurant, built around the line “Flavor starts here.”" },
-      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
-      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
       gallery: [
         { src: "assets/img/work/luqma-laffa/la1.jpg" },
         { src: "assets/img/work/luqma-laffa/la2.jpg" },
@@ -184,8 +177,6 @@ const SITE = {
       services: ["identity"],
       cover: "assets/img/work/jal-alfakher/cover7.jpg", video: "",
       summary: { ar: "هوية بصرية لملحمة تقدم جميع أنواع اللحوم الطازجة، شعارها يجمع حرف الجيم مع ساطور التقطيع.", en: "A visual identity for a butchery offering all kinds of fresh meat, with a mark that merges the letter J with a butcher's cleaver." },
-      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
-      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
       gallery: [
         { src: "assets/img/work/jal-alfakher/ja1.jpg" },
         { src: "assets/img/work/jal-alfakher/ja2.jpg" },
@@ -200,8 +191,6 @@ const SITE = {
       services: ["identity"],
       cover: "assets/img/work/le-voile/cover8.jpg", video: "",
       summary: { ar: "هوية بصرية ناعمة لعلامة أقمشة وطرح، بألوان الوردي والأخضر الهادئ وعبارة «A Veil of Elegance».", en: "A soft visual identity for a fabric and veil brand, in calm pink and sage tones, built around the line “A Veil of Elegance.”" },
-      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
-      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
       gallery: [
         { src: "assets/img/work/le-voile/vo1.jpg" },
         { src: "assets/img/work/le-voile/vo2.jpg" },
@@ -219,8 +208,6 @@ const SITE = {
       services: ["identity"],
       cover: "assets/img/work/levan/cover9.jpg", video: "",
       summary: { ar: "هوية بصرية لمخبز كرواسون وقهوة، بألوان القشرة الذهبية والكريمة الفرنسية والأزرق الهادئ، وعبارة «ليفان بيومك».", en: "A visual identity for a croissant bakery and café, in golden crust, French cream and calm blue tones, with the line “Levan Beyomk.”" },
-      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
-      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
       gallery: [
         { src: "assets/img/work/levan/va1.jpg" },
         { src: "assets/img/work/levan/va2.jpg" },
@@ -239,8 +226,6 @@ const SITE = {
       services: ["identity"],
       cover: "assets/img/work/azm/cover10.jpg", video: "",
       summary: { ar: "دليل هوية بصرية لتطبيق عزم، المنصة الذكية التي تربط العملاء بمقدمي خدمات السيارات والورش والسطحات بتجربة سلسة وموثوقة.", en: "Brand guidelines for AZM, a smart platform connecting customers with car service providers, workshops and towing services through a seamless, reliable experience." },
-      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
-      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
       gallery: [
         { src: "assets/img/work/azm/azm1.jpg" },
         { src: "assets/img/work/azm/azm2.jpg" },
@@ -266,8 +251,6 @@ const SITE = {
       services: ["social"],
       cover: "assets/img/work/coffee/cover.png", video: "",
       summary: { ar: "سلسلة منشورات لحسابات عنوان القهوة على وسائل التواصل الاجتماعي.", en: "A series of social media posts for Coffee Address." },
-      challenge: { ar: "اكتب هنا التحدي أو هدف العميل.", en: "Describe the client's goal or challenge here." },
-      solution: { ar: "اكتب هنا كيف حليت التحدي.", en: "Describe how you solved it here." },
       gallery: [
         { src: "assets/img/work/coffee/co1.png", size: "half" },
         { src: "assets/img/work/coffee/co2.png", size: "half" },
@@ -399,11 +382,82 @@ const SITE = {
         { src: "assets/img/work/alothman/ot5.png", size: "half" },
       ]
     },
+        {
+      slug: "coffee", year: "2026", featured: true,
+      title: { ar: "عنوان القهوة", en: "Coffee Address" },
+      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social media posts" },
+      client: { ar: "عنوان القهوة", en: "Coffee Address" },
+      services: ["social"],
+      cover: "assets/img/work/coffee/cover.png", video: "",
+      summary: { ar: "سلسلة منشورات لحسابات عنوان القهوة على وسائل التواصل الاجتماعي.", en: "A series of social media posts for Coffee Address." },
+      gallery: [
+        { src: "assets/img/work/coffee/co1.png", size: "half" },
+        { src: "assets/img/work/coffee/co2.png", size: "half" },
+        { src: "assets/img/work/coffee/co3.png", size: "half" },
+        { src: "assets/img/work/coffee/co4.png", size: "half" },
+        { src: "assets/img/work/coffee/co5.png", size: "half" },      ]
+    },
    /*هنا تكمله الاعمال الاخرى */
+    {
+      slug: "crumeli-marketing", year: "2026",
+      title: { ar: "كرومِلي — تسويق", en: "Crumeli — Marketing" },
+      category: { ar: "تطبيقات تسويق", en: "Marketing applications" },
+      client: { ar: "كرومِلي", en: "Crumeli" },
+      services: ["marketing"],
+      cover: "assets/img/work/marketing/cr-1.jpg", video: "",
+      summary: { ar: "", en: "" }, challenge: { ar: "", en: "" }, solution: { ar: "", en: "" },
+      gallery: [
+        { src: "assets/img/work/marketing/m1.PNG" },
+        { src: "assets/img/work/marketing/m2.PNG" },
+        { src: "assets/img/work/marketing/m3.png" },
+        { src: "assets/img/work/marketing/m4.jpg" },
+        { src: "assets/img/work/marketing/m5.png" },
+        { src: "assets/img/work/marketing/m6.png" },
+        { src: "assets/img/work/marketing/m7.png" },
+        { src: "assets/img/work/marketing/m8.png" },
+        { src: "assets/img/work/marketing/m9.png" },
+        { src: "assets/img/work/marketing/m10.jpg" },
+        { src: "assets/img/work/marketing/m11.jpg" },
+        { src: "assets/img/work/marketing/m12.jpg" },
+        { src: "assets/img/work/marketing/m13.jpg" },
+        { src: "assets/img/work/marketing/m14.jpg" },
+        { src: "assets/img/work/marketing/m15.png" },
 
-
+      ]
+    },
+    {
+      slug: "ai-presentation", year: "2026", display: "long",
+      title: { ar: "الذكاء الاصطناعي", en: "Artificial Intelligence" },
+      category: { ar: "عرض تقديمي", en: "Presentation" },
+      client: { ar: "مقرر مهارات الحاسب", en: "Computer Skills course" },
+      services: ["presentations"],
+      cover: "assets/img/work/ai/ai-1.jpg", video: "",
+      summary: { ar: "", en: "" }, challenge: { ar: "", en: "" }, solution: { ar: "", en: "" },
+      gallery: [
+        { src: "assets/img/work/ai/ai-1.jpg" },
+        { src: "assets/img/work/ai/ai-2.jpg" },
+        { src: "assets/img/work/ai/ai-3.jpg" },
+        { src: "assets/img/work/ai/ai-4.jpg" },
+        { src: "assets/img/work/ai/ai-5.jpg" }
+      ]
+    },
+    {
+      slug: "moms-heart", year: "2026", display: "long",
+      title: { ar: "Mom's Heart", en: "Mom's Heart" },
+      category: { ar: "عرض تقديمي", en: "Presentation" },
+      client: { ar: "Mom's Heart — متجر ألعاب تعليمية", en: "Mom's Heart — Educational toys store" },
+      services: ["presentations"],
+      cover: "assets/img/work/moms-heart/mh-1.jpg", video: "",
+      summary: { ar: "", en: "" }, challenge: { ar: "", en: "" }, solution: { ar: "", en: "" },
+      gallery: [
+        { src: "assets/img/work/moms-heart/mh-1.jpg" },
+        { src: "assets/img/work/moms-heart/mh-2.jpg" },
+        { src: "assets/img/work/moms-heart/mh-3.jpg" },
+        { src: "assets/img/work/moms-heart/mh-4.jpg" },
+        { src: "assets/img/work/moms-heart/mh-5.jpg" }
+      ]
+    },
   ],
-
 
   /* ---------- شعارات العملاء (شريط متحرك) ---------- */
   clients: [
@@ -451,6 +505,7 @@ const SITE = {
     text: { ar: "مجموعة مختارة من الهويات والمطبوعات والمواقع التي صممتها لعلامات في قطاعات مختلفة.", en: "A selection of identities, print and websites designed for brands across different sectors." },
     // نصوص المجلدات
     projects: { ar: "مشاريع", en: "projects" },
+    designs: { ar: "تصميم", en: "designs" },
     coverTab: { ar: "ملف الأعمال", en: "Portfolio" },
     folderHint: { ar: "اختر مجلداً لاستعراض الأعمال", en: "Pick a folder to browse the work" },
     scrollHint: { ar: "مرّر لاستعراض المشاريع", en: "Scroll to browse" },
@@ -463,20 +518,19 @@ const SITE = {
   /* ---------- صفحة من أنا ---------- */
   about: {
     eyebrow: { ar: "من أنا", en: "About" },
-    title: { ar: "أهلاً، أنا أنوار", en: "Hi, I'm Sara" },
-    intro: { ar: "مصممة جرافيك متخصصة في الهويات البصرية،أؤمن أن وراء كل تصميم جيد فكرة واضحة، وأن التفاصيل هي ما يمنحها حضور. أنا مصممة جرافيك أستمتع بتطوير الأفكار وتحويلها إلى حلول بصرية متكاملة. أحرص أن يكون لكل مشروع أسلوبه وشخصيته الخاصة، وأولي التفاصيل عناية كبيرة للوصول إلى نتيجة متناسقه ومدروسة.", en: "A graphic designer specialising in brand identity. I believe that behind every great design lies a clear idea, and it I believe that behind every great design lies a clear idea, and it is the details that give it presence. As a graphic designer, I is the details that give it presence. As a graphic designer, I enjoy developing concepts and turning them into cohesive enjoy developing concepts and turning them into cohesive  visual solutions. I strive to ensure every project has its own visual solutions. I strive to ensure every project has its own unique style and personality, paying close attention to detail to unique style and personality, paying close attention to detail to achieve a harmonious and well crafted result." },
-    portrait: "assets/img/portrait.svg",
-    
-    paragraphs: [
-        ],
+    title: { ar: "أهلاً، أنا أنوار", en: "Hi, I'm Anwar" },
+    // الجملة الكبيرة تحت العنوان
+    lead: { ar: "مصممة جرافيك متخصصة في الهويات البصرية", en: "A graphic designer specialising in brand identity" },
+    // باقي النبذة (بخط أصغر)
+    intro: { ar: "أؤمن أن وراء كل تصميم جيد فكرة واضحة، وأن التفاصيل هي ما يمنحها حضور. أنا مصممة جرافيك أستمتع بتطوير الأفكار وتحويلها إلى حلول بصرية متكاملة. أحرص أن يكون لكل مشروع أسلوبه وشخصيته الخاصة، وأولي التفاصيل عناية كبيرة للوصول إلى نتيجة متناسقه ومدروسة.", en: "I believe that behind every great design lies a clear idea, and it is the details that give it presence. As a graphic designer, I enjoy developing concepts and turning them into cohesive visual solutions. I strive to ensure every project has its own unique style and personality, paying close attention to detail to achieve a harmonious and well crafted result." },
 
     stepsEyebrow: { ar: "طريقة العمل", en: "Approach" },
     stepsTitle: { ar: "أربع مراحل واضحة", en: "Four clear steps" },
     steps: [
-      { bg: "#c9cbbb", fg: "#1d1b18", title: { ar: "١. الاكتشاف", en: "1. Discover" }, text: { ar: "نجلس معاً لنفهم علامتك وجمهورك ومنافسيك، ونحدد الهدف بوضوح.", en: "We sit down to understand your brand, audience and competitors, and define the goal clearly." } },
-      { bg: "#d6c3b2", fg: "#1d1b18", title: { ar: "٢. الفكرة", en: "2. Define" }, text: { ar: "أحول ما تعلمناه إلى استراتيجية واتجاه بصري واضح نتفق عليه قبل التصميم.", en: "I turn what we learned into a strategy and a clear visual direction we agree on before designing." } },
-      { bg: "#d9cfc1", fg: "#1d1b18", title: { ar: "٣. التصميم", en: "3. Design" }, text: { ar: "أصمم المقترح وأشرح لك كل قرار، ثم نطوره معاً حتى يكتمل.", en: "I design the proposal and walk you through every decision, then we refine it together." } },
-      { bg: "#e4d8c3", fg: "#1d1b18", title: { ar: "٤. التسليم", en: "4. Deliver" }, text: { ar: "تستلم كل الملفات ودليل استخدام واضح، وأبقى معك بعد الإطلاق.", en: "You get every file and clear guidelines, and I stay with you after launch." } }
+       { icon: "compass", bg: "#c9cbbb", fg: "#1d1b18", title: { ar: "الاكتشاف", en: "Discover" }, text: { ar: "نجلس معاً لنفهم علامتك وجمهورك ومنافسيك، ونحدد الهدف بوضوح.", en: "We sit down to understand your brand, audience and competitors, and define the goal clearly." } },
+      { icon: "lightbulb", bg: "#d6c3b2", fg: "#1d1b18", title: { ar: "الفكرة", en: "Define" }, text: { ar: "أحول ما تعلمناه إلى استراتيجية واتجاه بصري واضح نتفق عليه قبل التصميم.", en: "I turn what we learned into a strategy and a clear visual direction we agree on before designing." } },
+      { icon: "pen", bg: "#d9cfc1", fg: "#1d1b18", title: { ar: "التصميم", en: "Design" }, text: { ar: "أصمم المقترح وأشرح لك كل قرار، ثم نطوره معاً حتى يكتمل.", en: "I design the proposal and walk you through every decision, then we refine it together." } },
+      { icon: "package", bg: "#e4d8c3", fg: "#1d1b18", title: { ar: "التسليم", en: "Deliver" }, text: { ar: "تستلم كل الملفات ودليل استخدام واضح، وأبقى معك بعد الإطلاق.", en: "You get every file and clear guidelines, and I stay with you after launch." } }
     ]
   },
 

@@ -128,10 +128,23 @@ export function ServiceCard({ x, lang }) {
   );
 }
 
+// أيقونات خطية احترافية (من مكتبة Lucide، رخصة ISC) — تأخذ لون النص تلقائياً
+const LINE_ICONS = {
+  compass: (<><circle cx="12" cy="12" r="10" /><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /></>),
+  search: (<><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></>),
+  lightbulb: (<><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></>),
+  pen: (<><path d="m18 13-.654-4.736a4 4 0 00-2.756-3.266l-9.163-2.9a2 2 0 00-2.017.493l-.82.819a2 2 0 00-.492 2.017l2.9 9.163a4 4 0 003.266 2.756L13 18" /><path d="M18.648 12.352a1.205 1.205 0 011.704 0l1.296 1.296a1.205 1.205 0 010 1.704l-6.296 6.296a1.205 1.205 0 01-1.704 0l-1.296-1.296a1.205 1.205 0 010-1.704z" /><path d="m3 3 6.586 6.586" /><circle cx="11" cy="11" r="2" /></>),
+  package: (<><path d="M12 22V12" /><path d="m16 17 2 2 4-4" /><path d="M21 11.127V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.32-.753" /><path d="M3.29 7 12 12l8.71-5" /><path d="m7.5 4.27 8.997 5.148" /></>),
+  send: (<><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /><path d="m21.854 2.147-10.94 10.939" /></>)
+};
+export const LineIcon = ({ name, className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{LINE_ICONS[name]}</svg>
+);
+
 export function StepCard({ x, lang }) {
   return (
     <article className="svc" style={{ "--bg": x.bg, "--fg": x.fg }}>
-      <div className="svc__top"><h3 className="svc__title">{tr(x.title, lang)}</h3></div>
+      <div className="svc__top">{x.icon && <LineIcon name={x.icon} className="svc__icon" />}<h3 className="svc__title">{tr(x.title, lang)}</h3></div>
       <div className="svc__bottom"><div className="svc__text"><p>{tr(x.text, lang)}</p></div></div>
     </article>
   );
