@@ -538,7 +538,7 @@ const SITE = {
   contact: {
     eyebrow: { ar: "تواصل", en: "Contact" },
     title: { ar: "لنصنع شيئاً جميلاً معاً", en: "Let's make something beautiful together" },
-    text: { ar: "أخبرني عن مشروعك، وسأرد عليك خلال يومي عمل.", en: "Tell me about your project and I'll get back to you within two working days." },
+    text: { ar: "أخبرني عن مشروعك، وسأرد عليك .", en: "Tell me about your project and I'll get back to you within two working days." },
     form: {
       name: { ar: "الاسم", en: "Name" },
       email: { ar: "البريد الإلكتروني", en: "Email" },
