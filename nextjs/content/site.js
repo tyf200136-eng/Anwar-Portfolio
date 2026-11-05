@@ -243,6 +243,54 @@ const SITE = {
         { src: "assets/img/work/azm/azm14.jpg" },
       ]
     },
+        {
+      slug: "raghad", year: "2026", featured: true, display: "long",
+      title: { ar: "رغد بنت محمد", en: "Raghad Bint Mohammed" },
+      category: { ar: "هوية بصرية", en: "Visual identity" },
+      client: { ar: "المحامية والموثقة رغد بنت محمد", en: "Raghad Bint Mohammed, Lawyer & Notary" },
+      services: ["identity"],
+      cover: "assets/img/work/raghad/rg-cover.jpg", video: "",
+      summary: { ar: "", en: "" }, challenge: { ar: "", en: "" }, solution: { ar: "", en: "" },
+      gallery: [
+        { src: "assets/img/work/raghad/rg1.jpg" },
+        { src: "assets/img/work/raghad/rg2.jpg" },
+        { src: "assets/img/work/raghad/rg3.jpg" },
+        { src: "assets/img/work/raghad/rg4.jpg" },
+        { src: "assets/img/work/raghad/rg5.jpg" }
+      ]
+    },
+        {
+      slug: "alayna", year: "2026", featured: true, display: "long",
+      title: { ar: "ALAYNA", en: "ALAYNA" },
+      category: { ar: "هوية بصرية", en: "Visual identity" },
+      client: { ar: "ALAYNA — للعناية باليدين والأظافر", en: "ALAYNA — Hand & nail care" },
+      services: ["identity"],
+      cover: "assets/img/work/alayna/al-cover.jpg", video: "",
+      summary: { ar: "", en: "" }, challenge: { ar: "", en: "" }, solution: { ar: "", en: "" },
+      gallery: [
+        { src: "assets/img/work/alayna/al1.jpg" },
+        { src: "assets/img/work/alayna/al2.jpg" },
+        { src: "assets/img/work/alayna/al3.jpg" },
+        { src: "assets/img/work/alayna/al4.jpg" }
+      ]
+    },
+        {
+      slug: "lumi", year: "2026", featured: true, display: "long",
+      title: { ar: "Lumi Eyes", en: "Lumi Eyes" },
+      category: { ar: "هوية بصرية", en: "Visual identity" },
+      client: { ar: "Lumi Eyes — عدسات لاصقة", en: "Lumi Eyes — Contact lenses" },
+      services: ["identity"],
+      cover: "assets/img/work/lumi/lu-cover.jpg", video: "",
+      summary: { ar: "", en: "" }, challenge: { ar: "", en: "" }, solution: { ar: "", en: "" },
+      gallery: [
+        { src: "assets/img/work/lumi/lu1.jpg" },
+        { src: "assets/img/work/lumi/lu2.jpg" },
+        { src: "assets/img/work/lumi/lu3.jpg" },
+        { src: "assets/img/work/lumi/lu4.jpg" },
+        { src: "assets/img/work/lumi/lu5.jpg" },
+        { src: "assets/img/work/lumi/lu6.jpg" }
+      ]
+    },
     {
       slug: "coffee", year: "2026", featured: true,
       title: { ar: "عنوان القهوة", en: "Coffee Address" },
@@ -382,21 +430,40 @@ const SITE = {
         { src: "assets/img/work/alothman/ot5.png", size: "half" },
       ]
     },
-        {
-      slug: "coffee", year: "2026", featured: true,
-      title: { ar: "عنوان القهوة", en: "Coffee Address" },
-      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social media posts" },
-      client: { ar: "عنوان القهوة", en: "Coffee Address" },
+
+    {
+      slug: "booca", 
+      year: "2025", 
+      featured: true,
+      title: { ar: "مطعم بوكا", en: "BOOCA Burger" },
+      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social Media Posts" },
+      client: { ar: "بوكا للبرجر واللحم المدخن", en: "BOOCA Smoked Beef & Burger" },
       services: ["social"],
-      cover: "assets/img/work/coffee/cover.png", video: "",
-      summary: { ar: "سلسلة منشورات لحسابات عنوان القهوة على وسائل التواصل الاجتماعي.", en: "A series of social media posts for Coffee Address." },
+      cover: "assets/img/work/booca/cover11.png", 
+      video: "",
+      summary: { 
+        ar: "صناعة محتوى سوشيال ميديا مبتكر لمطعم بوكا، يدمج بين التصوير الاحترافي للوجبات والرسومات الرقمية (Doodle Art) لإبراز قوة الطعم وتميز اللحم المدخن.", 
+        en: "Creative social media design for BOOCA, blending appetizing food photography with playful digital doodle art to emphasize rich flavor and smoked beef expertise." 
+      },
+      challenge: { 
+        ar: "الخروج من النمطية المعتادة في تصوير البرجر، وإبراز حجم الوجبة وقوة النكهة بطريقة بصرية تلفت النظر سريعاً وتثير شهية وتفاعل المتابعين.", 
+        en: "Breaking free from traditional burger post layouts to visually convey portion size, fullness, and rich flavor in a scroll-stopping, youthful way." 
+      },
+      solution: { 
+        ar: "دمج صور البرجر الواقعية مع عناصر ورسومات كرتونية جريئة تعكس معنى القوة واللذة، مع كتابة نصوص تسويقية حماسية ومباشرة تعزز الرغبة في التجربة والطلب الفوري.", 
+        en: "Combining realistic high-detail food shots with bold illustrative elements that signify strength and indulgence, paired with punchy copy driving instant cravings." 
+      },
       gallery: [
-        { src: "assets/img/work/coffee/co1.png", size: "half" },
-        { src: "assets/img/work/coffee/co2.png", size: "half" },
-        { src: "assets/img/work/coffee/co3.png", size: "half" },
-        { src: "assets/img/work/coffee/co4.png", size: "half" },
-        { src: "assets/img/work/coffee/co5.png", size: "half" },      ]
+        { src: "assets/img/work/booca/bo1.png", size: "half" },
+        { src: "assets/img/work/booca/bo2.png", size: "half" },
+        { src: "assets/img/work/booca/bo3.png", size: "half" },
+        { src: "assets/img/work/booca/bo4.png", size: "half" },
+        { src: "assets/img/work/booca/bo5.png", size: "half" },
+        { src: "assets/img/work/booca/bo6.png", size: "half" },
+        { src: "assets/img/work/booca/bo7.png", size: "half" },
+      ]
     },
+
    /*هنا تكمله الاعمال الاخرى */
     {
       slug: "crumeli-marketing", year: "2026",
