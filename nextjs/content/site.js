@@ -454,13 +454,106 @@ const SITE = {
         en: "Combining realistic high-detail food shots with bold illustrative elements that signify strength and indulgence, paired with punchy copy driving instant cravings." 
       },
       gallery: [
-        { src: "assets/img/work/booca/bo1.png", size: "half" },
-        { src: "assets/img/work/booca/bo2.png", size: "half" },
-        { src: "assets/img/work/booca/bo3.png", size: "half" },
-        { src: "assets/img/work/booca/bo4.png", size: "half" },
-        { src: "assets/img/work/booca/bo5.png", size: "half" },
-        { src: "assets/img/work/booca/bo6.png", size: "half" },
-        { src: "assets/img/work/booca/bo7.png", size: "half" },
+        { src: "assets/img/work/booca/bo1.png" },
+        { src: "assets/img/work/booca/bo2.png"},
+        { src: "assets/img/work/booca/bo3.png"},
+        { src: "assets/img/work/booca/bo4.png"},
+        { src: "assets/img/work/booca/bo5.png"},
+        { src: "assets/img/work/booca/bo6.png"},
+      ]
+    },
+    {
+      slug: "al-riwaa", 
+      year: "2025", 
+      featured: true,
+      title: { ar: "مجمع الرواء الطبي", en: "Al-Riwaa Medical Center" },
+      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social Media Posts" },
+      client: { ar: "مجمع الرواء الطبي المتخصص", en: "Al-Riwaa Medical Center" },
+      services: ["social"],
+      cover: "assets/img/work/al-riwaa/cover12.png", 
+      video: "",
+      summary: { 
+        ar: "تصميم محتوى رقمي وتوعوي لطب وجراحة الأسنان في مجمع الرواء الطبي، يجمع بين الجاذبية البصرية والرسائل الطبية التثقيفية.", 
+        en: "Digital and awareness content design for Al-Riwaa Medical Center (Dental Care), combining modern 3D visuals with educational health messages." 
+      },
+      challenge: { 
+        ar: "كسر النمطية والخوف المرتبط بزيارة طبيب الأسنان، وتحويل النصائح الطبية المعقدة إلى محتوى بصري جذاب وسهل الاستيعاب يشجع على المبادرة بالفحص والوقاية.", 
+        en: "Overcoming dental anxiety and transforming routine health advice into visually engaging, digestible content that encourages preventive checkups." 
+      },
+      solution: { 
+        ar: "توظيف عناصر ثلاثية الأبعاد (3D Elements) بألوان الهوية المعتمدة (الأحمر والأزرق) مع صياغة رسائل تحفيزية تركز على مفهوم 'الأسنان كاستثمار دائم' لبناء الثقة وزيادة المراجعين.", 
+        en: "Utilizing modern 3D dental elements within brand colors, paired with compelling copy framing oral health as a lifelong investment to drive appointments." 
+      },
+      gallery: [
+        { src: "assets/img/work/al-riwaa/rw1.png", size: "half" },
+        { src: "assets/img/work/al-riwaa/rw2.jpg", size: "half" },
+        { src: "assets/img/work/al-riwaa/rw3.jpg", size: "half" },
+        { src: "assets/img/work/al-riwaa/rw4.png", size: "half" },
+      ]
+    },
+    {
+      slug: "bello-coffee", 
+      year: "2025", 
+      featured: true,
+      title: { ar: "بيلو كافيه", en: "Bello Specialty Coffee" },
+      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social Media Posts" },
+      client: { ar: "بيلو للقهوة المختصة", en: "Bello Specialty Coffee" },
+      services: ["social"],
+      cover: "assets/img/work/bello/cover13.jpg", 
+      video: "",
+      summary: { 
+        ar: "تصميم وإخراج محتوى إطلاق 'بوكس الجمعات' لبيلو كافيه، بأسلوب بصري دافئ يعكس كرم الضيافة ولحظات المشاركة مع العائلة والأصدقاء.", 
+        en: "Creative campaign design for Bello Specialty Coffee launching the 'Gatherings Box', highlighting hospitality and shared moments." 
+      },
+      challenge: { 
+        ar: "إبراز منتج الجمعات الجديد كخيار أول في المناسبات واللقاءات، وربط القهوة المختصة بأجواء الألفة دون أن يفقد البراند طابعه الهادئ والأنيق.", 
+        en: "Positioning the new coffee box as the top choice for social gatherings while maintaining the brand's calm and elegant aesthetic." 
+      },
+      solution: { 
+        ar: "الاعتماد على تصوير واقعي يوثّق لحظة الصب والمشاركة (Lifestyle)، مع اختيار عبارات قريبة من القلب ('صبّة وحدة تكفي المزاج كله') تعزز الارتباط العاطفي بالمنتج.", 
+        en: "Using authentic lifestyle photography capturing the pour moment, combined with culturally resonant copywriting to trigger cravings and emotional connection." 
+      },
+      gallery: [
+        { src: "assets/img/work/bello/be1.jpg", size: "half" },
+        { src: "assets/img/work/bello/be2.jpeg", size: "half" },
+        { src: "assets/img/work/bello/be3.jpg", size: "half" },
+        { src: "assets/img/work/bello/be4.jpg", size: "half" },
+        { src: "assets/img/work/bello/be5.jpg", size: "half" },
+      ]
+    },
+    {
+      slug: "rada-fashion", 
+      year: "2025", 
+      featured: true,
+      title: { ar: "متجر رادا للملابس", en: "RADA Fashion" },
+      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social Media Posts" },
+      client: { ar: "رادا للأزياء العصرية", en: "RADA Clothing Store" },
+      services: ["social"],
+      cover: "assets/img/work/rada/cover14.png", 
+      video: "",
+      summary: { 
+        ar: "تصميم حملة إعلانية وترويجية لمواسم التخفيضات في متجر رادا للملابس، بأسلوب بصري جريء يناسب ثقافة الأزياء الشبابية (Streetwear).", 
+        en: "Promotional campaign and social media design for RADA clothing store sales, utilizing bold visual graphics tailored for youth streetwear." 
+      },
+      challenge: { 
+        ar: "الإعلان عن خصم قوي (50%) بطريقة غير مكررة تبتعد عن شارات الخصومات التقليدية، وتجذب جيل الشباب والمهتمين بالستايل العصري السريع.", 
+        en: "Announcing a major 50% discount without resorting to generic sale badges, maintaining an urban, high-fashion aesthetic appealing to Gen-Z." 
+      },
+      solution: { 
+        ar: "ابتكار خطوط بصرية هندسية تجريدية (Optical Lines) تدمج رقم الخصم ضمن تكوين التصميم كخلفية لقطع الملابس، مما لفت الانتباه وحفّز الزيارات السريعة للمتجر.", 
+        en: "Developing abstract optical line patterns integrating the discount value into the backdrop of the products, capturing immediate focus and driving store visits." 
+      },
+      gallery: [
+        { src: "assets/img/work/rada/ra1.png", size: "half" },
+        { src: "assets/img/work/rada/ra2.png", size: "half" },
+        { src: "assets/img/work/rada/ra3.png", size: "half" },
+        { src: "assets/img/work/rada/ra4.png", size: "half" },
+        { src: "assets/img/work/rada/ra5.png", size: "half" },
+        { src: "assets/img/work/rada/ra6.png", size: "half" },
+        { src: "assets/img/work/rada/ra7.png", size: "half" },
+        { src: "assets/img/work/rada/ra8.png", size: "half" },
+        { src: "assets/img/work/rada/ra9.png", size: "half" },
+        { src: "assets/img/work/rada/ra10.png", size: "half" },
       ]
     },
 
