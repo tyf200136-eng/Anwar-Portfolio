@@ -557,6 +557,85 @@ const SITE = {
       ]
     },
 
+    {
+      slug: "rada-cafe", 
+      year: "2025", 
+      featured: true,
+      title: { ar: "رادا كافيه", en: "RADA Cafe" },
+      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social Media Posts" },
+      client: { ar: "رادا كافيه للقهوة والحلويات", en: "RADA Cafe" },
+      services: ["social"],
+      cover: "assets/img/work/rada-cafe/cove15.png", 
+      video: "",
+      summary: { 
+        ar: "صناعة محتوى رقمي لرادا كافيه يسلّط الضوء على أصناف الحلى المبتكرة وتجربة تذوّق التشوروز مع الصوصات الخاصة والقهوة المختصة.", 
+        en: "Visual social media content for RADA Cafe, highlighting signature sweet treats like crunchy churros with dips and specialty coffee." 
+      },
+      challenge: { 
+        ar: "إبراز تفاصيل ولذة أصناف الحلى خارج النطاق التقليدي للقهوة، وتقديمها بأسلوب راقٍ وجذاب بصرياً يحفّز الزوار على التجربة المباشرة في الفرع.", 
+        en: "Highlighting signature desserts beyond standard coffee visuals with an elegant, craving-inducing style that drives physical cafe visits." 
+      },
+      solution: { 
+        ar: "توظيف إطارات هندسية عصرية بتدرجات ألوان هادئة مستوحاة من المكان (الزيتي والرمادي)، مع التركيز على لقطات تفاعلية للحلى (تغميس التشوروز) لتوصيل الشعور بالطعم الطازج.", 
+        en: "Utilizing modern geometric frames in earthy muted tones, complemented by close-up dipping action shots to emphasize freshness and rich textures." 
+      },
+      gallery: [
+        { src: "assets/img/work/rada-cafe/rc1.png", size: "half" },
+        { src: "assets/img/work/rada-cafe/rc2.png", size: "half" },
+        { src: "assets/img/work/rada-cafe/rc3.png", size: "half" },
+        { src: "assets/img/work/rada-cafe/rc4.png", size: "half" },
+        { src: "assets/img/work/rada-cafe/rc5.png", size: "half" },
+        { src: "assets/img/work/rada-cafe/rc6.png", size: "half" },
+        { src: "assets/img/work/rada-cafe/rc7.png", size: "half" },
+        { src: "assets/img/work/rada-cafe/rc8.png", size: "half" },
+        { src: "assets/img/work/rada-cafe/rc9.png", size: "half" },
+        { src: "assets/img/work/rada-cafe/rc10.png", size: "half" },
+      ]
+    },
+    {
+      slug: "nokhbah-medical", 
+      year: "2025", 
+      featured: true,
+      title: { ar: "مجمع نخبة التداوي الطبي", en: "Nokhbah Medical Center" },
+      category: { ar: "منشورات وسائل التواصل الاجتماعي", en: "Social Media Posts" },
+      client: { ar: "مجمع نخبة التداوي الطبي العام", en: "Nokhbah Altadawi Medical Center" },
+      services: ["social"],
+      cover: "assets/img/work/nokhbah/cover16.jpg", 
+      video: "",
+      summary: { 
+        ar: "تصميم وإخراج حملة 'عروض الصيف' لمجمع نخبة التداوي الطبي، للترويج لباقات صحة العظام والحقن المفصلي بأسلوب بصري مرح ومناسب لموسم الإجازات.", 
+        en: "Summer campaign design for Nokhbah Medical Center, promoting bone health packages and joint treatments through an engaging seasonal theme." 
+      },
+      challenge: { 
+        ar: "عرض تفاصيل باقات طبية دقيقة وقوائم أسعار وتحاليل متعددة دون ازدحام بصري، وكسر الجمود والرهبة المعتادة من الإجراءات الطبية وعلاجات العظام.", 
+        en: "Displaying detailed medical tests and pricing without visual clutter, while breaking the intimidating nature of orthopedic and joint procedures." 
+      },
+      solution: { 
+        ar: "ابتكار شخصية كرتونية لطيفة (العظمة المسترخية على الشاطئ) تربط بين عافية العظام وأجواء الصيف، مع تنظيم الأسعار والباقات في جداول بصرية واضحة تحفّز على الحجز والاستفسار.", 
+        en: "Creating a playful summer-themed mascot (a relaxing bone character) paired with well-organized, readable pricing cards that encourage quick inquiries and bookings." 
+      },
+      gallery: [
+        { src: "assets/img/work/nokhbah/nk18.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk1.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk2.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk3.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk4.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk5.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk6.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk7.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk8.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk9.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk10.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk11.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk15.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk16.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk17.jpg", size: "half" },
+        { src: "assets/img/work/nokhbah/nk12.png", size: "half" },
+        { src: "assets/img/work/nokhbah/nk13.png", size: "half" },
+        { src: "assets/img/work/nokhbah/nk14.png", size: "half" },
+      ]
+    },
+
    /*هنا تكمله الاعمال الاخرى */
     {
       slug: "crumeli-marketing", year: "2026",
