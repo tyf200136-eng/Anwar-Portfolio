@@ -646,8 +646,8 @@ const SITE = {
       cover: "assets/img/work/marketing/cr-1.jpg", video: "",
       summary: { ar: "", en: "" }, challenge: { ar: "", en: "" }, solution: { ar: "", en: "" },
       gallery: [
-        { src: "assets/img/work/marketing/m1.PNG" },
-        { src: "assets/img/work/marketing/m2.PNG" },
+        { src: "assets/img/work/marketing/m1.png" },
+        { src: "assets/img/work/marketing/m2.png" },
         { src: "assets/img/work/marketing/m3.png" },
         { src: "assets/img/work/marketing/m4.jpg" },
         { src: "assets/img/work/marketing/m5.png" },
