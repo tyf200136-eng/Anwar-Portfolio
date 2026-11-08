@@ -16,15 +16,28 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const name = tr(SITE.brand.name, lang);
+  const share = tr(SITE.brand.shareTitle, lang);
+  const description = tr(SITE.home.tagline, lang);
+  const site = process.env.VERCEL_PROJECT_PRODUCTION_URL;
   return {
-    title: { default: `${name} — ${tr(SITE.brand.role, lang)}`, template: `%s — ${name}` },
-    description: tr(SITE.home.tagline, lang),
-    icons: { icon: "/assets/img/favicon.svg" },
-    alternates: { languages: { ar: "/ar", en: "/en" } }
+    metadataBase: new URL(site ? `https://${site}` : "http://localhost:3000"),
+    title: { default: share, template: `%s — ${name}` },
+    description,
+    icons: { icon: "/assets/img/favicon.svg", apple: "/assets/img/apple-icon.png" },
+    alternates: { languages: { ar: "/ar", en: "/en" } },
+    openGraph: {
+      type: "website",
+      siteName: name,
+      title: share,
+      description,
+      locale: lang === "ar" ? "ar_SA" : "en_US",
+      images: [{ url: "/assets/img/og.png", width: 1200, height: 630, alt: share }]
+    },
+    twitter: { card: "summary_large_image", title: share, description, images: ["/assets/img/og.png"] }
   };
 }
 
-export const viewport = { themeColor: "#26235c" };
+export const viewport = { themeColor: "#f3efe8" };
 
 // يضيف js-motion قبل ظهور الصفحة حتى لا تومض العناصر قبل الحركة
 const motionFlag = `if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("js-motion")`;

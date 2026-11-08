@@ -11,10 +11,10 @@
 const SITE = {
   /* ---------- معلومات المصمم ---------- */
   brand: {
-    name: { ar: "أنوار سيراج", en: "Anwar Siraj" },
+    name: { ar: "أنوار سراج", en: "Anwar Siraj" },
     // الكلمتان الكبيرتان في أعلى الصفحة الرئيسية
     wordTop: { ar: "أنوار", en: "Sara" },
-    wordBottom: { ar: "سيراج", en: "Nasser" },
+    wordBottom: { ar: "سراج", en: "Nasser" },
     role: { ar: "مصممة جرافيك وهويات بصرية", en: "Graphic & brand designer" },
     email: "hello@example.com",
     phone: "+966 50 000 0000",

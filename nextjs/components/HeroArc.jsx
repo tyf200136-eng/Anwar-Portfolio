@@ -54,7 +54,7 @@ export default function HeroArc({ items, label }) {
         const b = Math.abs(a), half = w / 2;
         const zIn = R * (1 - Math.cos(b)) - half * Math.sin(b);
         const xIn = (R * Math.sin(b) - half * Math.cos(b)) * P / Math.max(1, P - zIn);
-        const out = R * (1 - Math.cos(b)) > P * 0.85 || xIn > W / 2 + 40;
+        const out = b > Math.PI || R * (1 - Math.cos(b)) > P * 0.85 || xIn > W / 2 + 40;
         if (out) {
           if (el.style.visibility !== "hidden") el.style.visibility = "hidden";
           continue;
