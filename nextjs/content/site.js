@@ -21,9 +21,7 @@ const SITE = {
     email: "hello@example.com",
     phone: "+966 50 000 0000",
   
-    // رابط استقبال رسائل نموذج التواصل (مثلاً من formspree.io).
-    // اتركه فارغاً ليفتح النموذج برنامج البريد مباشرة.
-    formEndpoint: "/api/contact",
+
     socials: [
      
     ],
@@ -778,15 +776,13 @@ const SITE = {
     eyebrow: { ar: "تواصل", en: "Contact" },
     title: { ar: "لنصنع شيئاً جميلاً معاً", en: "Let's make something beautiful together" },
     text: { ar: "أخبرني عن مشروعك، وسأرد عليك .", en: "Tell me about your project and I'll get back to you within two working days." },
-    form: {
-      name: { ar: "الاسم", en: "Name" },
-      email: { ar: "البريد الإلكتروني", en: "Email" },
-      interest: { ar: "ما الذي تحتاجه؟", en: "What do you need?" },
-      message: { ar: "حدثني عن مشروعك", en: "Tell me about your project" },
-      send: { ar: "أرسل الرسالة", en: "Send message" },
-      sending: { ar: "جاري الإرسال…", en: "Sending…" },
-      success: { ar: "شكراً! وصلتني رسالتك وسأرد قريباً.", en: "Thank you! Your message arrived and I'll reply soon." },
-      error: { ar: "حدث خطأ، حاول مرة أخرى أو راسلني على البريد مباشرة.", en: "Something went wrong. Please try again or email me directly." }
+    status: { ar: "متاحة لمشاريع جديدة", en: "Available for new projects" },
+    waText: { ar: "السلام عليكم، شفت أعمالك وحاب أتكلم معك عن مشروع", en: "Hi! I saw your work and I'd like to talk about a project" },
+    labels: {
+      whatsapp: { ar: "واتساب", en: "WhatsApp" },
+      whatsappCta: { ar: "ابدأ محادثة", en: "Start a chat" },
+      email: { ar: "البريد", en: "Email" },
+      phone: { ar: "الجوال", en: "Phone" }
     },
     detailsTitle: { ar: "أو تواصل مباشرة", en: "Or reach out directly" }
   }

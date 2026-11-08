@@ -637,7 +637,33 @@ ul{margin:0;padding:0;list-style:none}
    ===================================================================== */
 .hx__logo{margin:0;line-height:0}
 .hx__logo img{display:block;width:auto;height:clamp(240px,46svh,520px);
+  max-height:72vw;
   animation:hxWrite 1.8s cubic-bezier(.6,0,.2,1) .2s both}
 /* اللوقو ينكتب من فوق لتحت عند فتح الصفحة */
 @keyframes hxWrite{from{clip-path:inset(0 0 100% 0);opacity:.2}to{clip-path:inset(0 0 0 0);opacity:1}}
 @media (prefers-reduced-motion:reduce){.hx__logo img{animation:none}}
+
+/* ---------- صفحة التواصل ---------- */
+.ct{padding-top:calc(var(--header-top) + var(--header-h) + clamp(48px,8vw,160px));padding-bottom:var(--space-m)}
+.ct__status{margin-bottom:clamp(24px,3vw,48px);color:var(--c-ink)}
+.ct__list{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--c-line)}
+.ct__row{display:grid;grid-template-columns:clamp(110px,14vw,220px) 1fr auto;align-items:center;gap:1rem;
+  padding-block:clamp(20px,2.6vw,44px);border-top:1px solid var(--c-line);text-decoration:none;color:inherit;
+  transition:padding-inline-start var(--speed) ease}
+.ct__label{font-size:var(--fs-small);color:var(--c-muted)}
+.ct__value{font-size:var(--fs-h3);font-weight:600;line-height:1.1;overflow-wrap:anywhere;justify-self:start}
+.ct__arrow{width:clamp(44px,4vw,64px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;
+  border:1px solid var(--c-line);transition:background var(--speed),color var(--speed),rotate var(--speed) ease}
+@media (hover:hover){
+  .ct__row:hover{padding-inline-start:clamp(10px,1.5vw,28px)}
+  .ct__row:hover .ct__arrow{background:var(--c-primary);color:var(--c-accent);border-color:var(--c-primary);rotate:-45deg}
+}
+[dir="rtl"] .ct__row:hover .ct__arrow{rotate:45deg}
+.ct__row:focus-visible{outline:2px solid var(--c-primary);outline-offset:4px}
+@media (max-width:600px){
+  .ct__row{grid-template-columns:1fr auto;row-gap:.4rem}
+  .ct__label{grid-column:1 / -1}
+}
+@media (prefers-reduced-motion:reduce){
+  .ct__row,.ct__arrow{transition:none}
+}
