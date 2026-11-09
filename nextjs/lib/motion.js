@@ -258,7 +258,7 @@ function initMotion(root, libs) {
     build();
     mq.classList.add("is-ready");
     cleanups.push(function () { clones.forEach(function (c) { c.remove(); }); });
-    if (!motion) return;
+    if (!gsap) return;
     var rev = mq.hasAttribute("data-reverse") ? -1 : 1;
     var setX = gsap.quickSetter(track, "x", "px");
     var x = -w / 2;

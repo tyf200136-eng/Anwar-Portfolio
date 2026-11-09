@@ -90,7 +90,7 @@ export default function HeroArc({ items, label }) {
     const ac = new AbortController();
     const opt = { signal: ac.signal };
     window.addEventListener("resize", () => { measure(); render(); }, opt);
-    if (!reduce && SPEED > 0) {
+    if (SPEED > 0) {
       window.addEventListener("scroll", onScroll, { passive: true, signal: ac.signal });
       stage.addEventListener("pointerover", (e) => { if (e.pointerType === "mouse") hover = true; }, opt);
       stage.addEventListener("pointerleave", () => { hover = false; }, opt);
