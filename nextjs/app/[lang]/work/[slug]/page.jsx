@@ -5,24 +5,28 @@ import SITE from "@/content/site";
 import { tr, pagePath, casePath, locales, src } from "@/lib/i18n";
 import { Media, Shape, IconBack, Follow } from "@/components/ui";
 
+// مشاريع المجلدات المباشرة (direct: true مثل التسويق) ما لها صفحة خاصة، تظهر في السكرول بس
+const directServices = SITE.services.filter((s) => s.direct).map((s) => s.slug);
+const PAGES = SITE.cases.filter((c) => !c.services.some((s) => directServices.includes(s)));
+
 export function generateStaticParams() {
-  return locales.flatMap((lang) => SITE.cases.map((c) => ({ lang, slug: c.slug })));
+  return locales.flatMap((lang) => PAGES.map((c) => ({ lang, slug: c.slug })));
 }
 export const dynamicParams = false;
 
 export async function generateMetadata({ params }) {
   const { lang, slug } = await params;
-  const c = SITE.cases.find((x) => x.slug === slug);
+  const c = PAGES.find((x) => x.slug === slug);
   return c ? { title: tr(c.title, lang), description: tr(c.summary, lang) } : {};
 }
 
 export default async function CasePage({ params }) {
   const { lang, slug } = await params;
-  const idx = SITE.cases.findIndex((x) => x.slug === slug);
+  const idx = PAGES.findIndex((x) => x.slug === slug);
   if (idx < 0) notFound();
   const t = (v) => tr(v, lang);
-  const c = SITE.cases[idx];
-  const next = SITE.cases[(idx + 1) % SITE.cases.length];
+  const c = PAGES[idx];
+  const next = PAGES[(idx + 1) % PAGES.length];
 
   return (
     <article>
