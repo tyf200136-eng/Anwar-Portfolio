@@ -20,8 +20,8 @@ const SITE = {
     wordTop: { ar: "أنوار", en: "Sara" },
     wordBottom: { ar: "سراج", en: "Nasser" },
     role: { ar: "مصممة جرافيك وهويات بصرية", en: "Graphic & brand designer" },
-    email: "hello@example.com",
-    phone: "+966 50 000 0000",
+    email: "anwar.23.siraj@gmail.com",
+    phone: "+966 53 86 3878",
   
 
     socials: [
